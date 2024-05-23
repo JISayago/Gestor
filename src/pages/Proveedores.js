@@ -5,6 +5,8 @@ import CabeceraProveedores from '../components/Proveedor/CabeceraProveedores'
 import ProveedorForm from '../components/Proveedor/ProveedorForm'
 import LineaProveedor from '../components/Proveedor/LineaProveedor'
 import Data from '../bbdd/bbdd.json';
+import { useNavigate } from 'react-router-dom'
+import { useUser } from '../context/UsuarioContext'
 
 function Proveedores() {
   const [proveedores, setProveedores] = useState(Data.proveedores);

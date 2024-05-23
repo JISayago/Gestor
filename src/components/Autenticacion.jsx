@@ -15,7 +15,6 @@ const Autenticacion = ({ children }) => {
   if (!usuarioCntxt) {
     return <Navigate to="/login" replace />;
   }
-
   return children;
 };
 

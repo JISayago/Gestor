@@ -10,7 +10,7 @@
       "contrasena": "tigre",
       "rol": "admin",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZ29uemFsZXoiLCJyb2wiOiJhZG1pbiIsImlhdCI6MTY3MTIzNDU2M30.9SfUdfEAPDZ5M7L9E6ECm56wRJQl7P3cR5n9qxkJE9c",
-      "imagen": "http://example.com/images/carlos_gonzalez.jpg",
+      "imgPerfilIndex": -1,
       "locales": [
         {
           "id": 1,
@@ -62,7 +62,7 @@
       "contrasena": "leon",
       "rol": "usuario",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcGVyZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.YfbxxBd_c2A8RoO2Z6WxBPW5_bqKAAkptXJyxC9IhFY",
-      "imagen": "http://example.com/images/maria_perez.jpg",
+      "imgPerfilIndex": -1,
       "locales": [
         {
           "id": 2,
@@ -90,7 +90,7 @@
       "contrasena": "panda",
       "rol": "usuario",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqbG9wZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.uFlVO1XfrNGTxT-hWZHJcNxuxMGf_UoA8alhj7IQZhs",
-      "imagen": "http://example.com/images/juan_lopez.jpg",
+      "imgPerfilIndex": -1,
       "locales": [
         {
           "id": 1,
@@ -112,7 +112,7 @@
       "contrasena": "loro",
       "rol": "usuario",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsbWFydGluZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.F7W7AcTcUZjxBhchFGxZO8GdkjVcONy8Hfqv12BG_0I",
-      "imagen": "http://example.com/images/lucia_martinez.jpg",
+      "imgPerfilIndex": -1,
       "locales": [
         {
           "id": 3,
@@ -130,11 +130,11 @@
       "telefono": "+5491145678901",
       "dni": "45678901",
       "email": "pedro.sanchez@example.com",
-      "nombreUsuario": "psanchez",
+      "nombreUsuario": "psanche222222222z",
       "contrasena": "ballena",
       "rol": "usuario",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwc2FuY2hzeiIsImlhdCI6MTY3MTIzNDU2M30.owYSD6q7QtwySpw0uDgThAOrsVc8y6aA3kO9z1Y_4jk",
-      "imagen": "http://example.com/images/pedro_sanchez.jpg",
+      "imgPerfilIndex": -1,
       "locales": [
         {
           "id": 5,

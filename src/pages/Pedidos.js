@@ -4,10 +4,13 @@ import CabeceraListadoProveedor from '../components/Proveedor/CabeceraListadoPro
 import CabeceraPedidos from '../components/Pedidos/CabeceraPedidos';
 import LineaPedido from '../components/Pedidos/LineaPedido';
 import Data from '../bbdd/bbdd.json';
+import { useUser } from '../context/UsuarioContext';
+import { useNavigate } from 'react-router-dom';
 
 function Pedidos() {
   const [pedidos, setPedidos] = useState(Data.pedidosProveedores);
   const [titulo,setTitulo] = useState(false)
+  
 
   return (
     <>

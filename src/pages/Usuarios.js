@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 
 import UsuarioForm from '../components/Usuario/UsuarioForm';
@@ -6,8 +6,12 @@ import CabeceraListadoUsuarios from '../components/Usuario/CabeceraListadoUsuari
 import LineaUsuario from '../components/Usuario/LineaUsuario';
 import Data from '../bbdd/bbdd.json';
 import CabeceraUsuarios from '../components/Usuario/CabeceraUsuarios';
+import { useUser } from '../context/UsuarioContext';
+import { useNavigate } from 'react-router-dom';
 
 function Usuarios() {
+  const { usuarioCntxt } = useUser();
+  const navigate = useNavigate();
   const [locales, setLocales] = useState(Data.locales);
   const [usuarios, setUsuarios] = useState(Data.usuarios)
   const [titulo, setTitulo] = useState('Agregar Usuario');
@@ -19,6 +23,10 @@ function Usuarios() {
   const [email, setEmail] = useState('');
   const [telefono, setTelefono] = useState('');
   const [localesAsignados, setLocalesAsignados] = useState([]);
+
+  useEffect(() => {
+    const rol = localStorage.getItem('usuarioCntxt').rol
+  },[usuarioCntxt])
 
   // Función para manejar el cambio de valores en los campos del formulario
   const handleInputChange = (event, setValue) => {

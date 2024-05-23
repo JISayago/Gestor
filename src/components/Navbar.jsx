@@ -46,17 +46,17 @@ function Navbar() {
       </div>
       <div className='w-2/4 bg-negro-2 rounded-full md:w-1/8 md:w-24  md:rounded-none md:bg-transparent'>
         <button
-          className='p-5 flex justify-center items-center md:flex-col md:w-auto'
+          className='p-5 flex justify-center items-center md:pr-5 md:flex-col md:w-28 md:overflow-hidden'
           onClick={() => setShowProfileMenu(!showProfileMenu)}
         >
-          <img className ='w-20 p-2 flex bg-negro-2 border-dotted border-4 border-color-1 rounded-full justify-center md:w-32' src={animalPerfil} alt="Perfil" />
-          <label className='text-white'>{usuarioCntxt ? usuarioCntxt.nombreUsuario : "Nombre Usuario"}</label>
+          <img className ='w-20 p-2 flex bg-negro-2 border-dotted border-4 border-color-1 rounded-full justify-center md:w-28' src={animalPerfil} alt="Perfil" />
+          <label className='text-white text-center'>{usuarioCntxt ? usuarioCntxt.nombreUsuario : "Nombre Usuario"}</label>
         </button>
         {showProfileMenu && (
-          <div className="absolute right-0 mt-10 bg-white rounded-md shadow-md">
-            <ul>
-              <li><Link to='#'>Perfil</Link></li>
-              <li><button onClick={pregSeguro}>Cerrar Sesión</button></li>
+          <div className="absolute  right-4 mt-0 bg-blanco rounded-md shadow-md">
+            <ul className='text-center'>
+              <li className='text-negro-1 border-b border-b-negro-1 p-2 hover:text-blanco hover:bg-color-1 rounded-t-md'><Link to='#'>Perfil</Link></li>
+              <li className='text-negro-1 p-2 hover:text-blanco hover:bg-color-3 rounded-b-md'><button onClick={pregSeguro}>Cerrar Sesión</button></li>
             </ul>
           </div>
         )}

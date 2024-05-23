@@ -10,27 +10,4 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         filename: 'output.css', // Especifica el archivo de salida de Webpack
     },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    require('tailwindcss'),
-                                    require('autoprefixer'),
-                                    // Otros plugins de PostCSS que puedas necesitar...
-                                ],
-                            },
-                        },
-                    },
-                ],
-            },
-        ],
-    },
 };

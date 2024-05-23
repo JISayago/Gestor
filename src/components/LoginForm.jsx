@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Data from '../bbdd/bbdd.json';
 import { useUser } from '../context/UsuarioContext';
 
-function LoginForm({ setIsAuthenticated, setIsAdmin }) {
-  const { setUsuarioCntxt } = useUser();
+function LoginForm() {
+  const { setUsuarioCntxt,setIsAdmin } = useUser();
   console.log('loginstorage',localStorage.getItem('usuarioCntxt'))
   
   const [users, setUsers] = useState(Data.usuarios)
@@ -33,8 +33,6 @@ function LoginForm({ setIsAuthenticated, setIsAdmin }) {
         
         if (user.contrasena === inputPass) {
           localStorage.setItem('usuarioCntxt', JSON.stringify(user));
-          //setIsAuthenticated(true)
-          user.rol === "admin" ? setIsAdmin(true) : setIsAdmin(false);
           setUsuarioCntxt(user);
           return navigate('/');
         }
