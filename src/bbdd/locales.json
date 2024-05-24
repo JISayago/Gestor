@@ -1,0 +1,398 @@
+{
+    "locales": [
+        {
+          "id": 1,
+          "nombre": "Local Central",
+          "dirección": "Avenida Siempreviva 123, Buenos Aires",
+          "imagen": "http://example.com/images/local_central.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor A",
+              "productos": [
+                {
+                  "nombre": "Remera Adidas",
+                  "precio": 500,
+                  "stock": 100,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                },
+                {
+                  "nombre": "Producto 2",
+                  "precio": 750,
+                  "stock": 50,
+                  "categoria": "Categoría 2",
+                  "talle": "L",
+                  "color": "Azul",
+                  "codigo": 10002
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Remera Adidas",
+              "precio": 500,
+              "stock": 100,
+              "categoria": "Categoría 1",
+              "talle": "M",
+              "color": "Rojo",
+              "codigo": 10001
+            },
+            {
+              "nombre": "Producto 2",
+              "precio": 750,
+              "stock": 50,
+              "categoria": "Categoría 2",
+              "talle": "L",
+              "color": "Azul",
+              "codigo": 10002
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Carlos",
+              "apellido": "Gonzalez",
+              "nombreUsuario": "cgonzalez",
+              "rol": "admin"
+            },
+            {
+              "nombre": "Juan",
+              "apellido": "Lopez",
+              "nombreUsuario": "jlopez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": [
+            {
+              "numeroComprobante": "0001/1",
+              "fecha": "2024-05-08",
+              "hora": "10:30",
+              "local": "Local Central",
+              "usuario": "jlopez",
+              "productos": [
+                {
+                  "nombre": "Producto 1",
+                  "precio": 500,
+                  "cantidad": 2,
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                },
+                {
+                  "nombre": "Producto 2",
+                  "precio": 750,
+                  "cantidad": 1,
+                  "talle": "L",
+                  "color": "Azul",
+                  "codigo": 10002
+                }
+              ],
+              "tipoDePago": "Efectivo",
+              "total": 1750
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Sucursal Norte",
+          "dirección": "Calle Falsa 456, Buenos Aires",
+          "imagen": "http://example.com/images/sucursal_norte.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor B",
+              "productos": [
+                {
+                  "nombre": "Producto 3",
+                  "precio": 600,
+                  "stock": 80,
+                  "categoria": "Categoría 1",
+                  "talle": "S",
+                  "color": "Verde",
+                  "codigo": 10003
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Producto 3",
+              "precio": 600,
+              "stock": 80,
+              "categoria": "Categoría 1",
+              "talle": "S",
+              "color": "Verde",
+              "codigo": 10003
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Carlos",
+              "apellido": "Gonzalez",
+              "nombreUsuario": "cgonzalez",
+              "rol": "admin"
+            },
+            {
+              "nombre": "Maria",
+              "apellido": "Perez",
+              "nombreUsuario": "mperez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": [
+            {
+              "numeroComprobante": "0001/2",
+              "fecha": "2024-05-07",
+              "hora": "14:15",
+              "local": "Sucursal Norte",
+              "usuario": "mperez",
+              "productos": [
+                {
+                  "nombre": "Producto 3",
+                  "precio": 600,
+                  "cantidad": 1,
+                  "talle": "S",
+                  "color": "Verde",
+                  "codigo": 10003
+                },
+                {
+                  "nombre": "Producto 1",
+                  "precio": 500,
+                  "cantidad": 1,
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                }
+              ],
+              "tipoDePago": "Tarjeta de Crédito",
+              "total": 1100
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nombre": "Sucursal Sur",
+          "dirección": "Boulevard Sur 789, Buenos Aires",
+          "imagen": "http://example.com/images/sucursal_sur.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor C",
+              "productos": [
+                {
+                  "nombre": "Producto 4",
+                  "precio": 700,
+                  "stock": 60,
+                  "categoria": "Categoría 2",
+                  "talle": "XL",
+                  "color": "Amarillo",
+                  "codigo": 10004
+                },
+                {
+                  "nombre": "Producto 1",
+                  "precio": 500,
+                  "stock": 100,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Producto 4",
+              "precio": 700,
+              "stock": 60,
+              "categoria": "Categoría 2",
+              "talle": "XL",
+              "color": "Amarillo",
+              "codigo": 10004
+            },
+            {
+              "nombre": "Producto 1",
+              "precio": 500,
+              "stock": 100,
+              "categoria": "Categoría 1",
+              "talle": "M",
+              "color": "Rojo",
+              "codigo": 10001
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Carlos",
+              "apellido": "Gonzalez",
+              "nombreUsuario": "cgonzalez",
+              "rol": "admin"
+            },
+            {
+              "nombre": "Lucia",
+              "apellido": "Martinez",
+              "nombreUsuario": "lmartinez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": [
+            {
+              "numeroComprobante": "0001/3",
+              "fecha": "2024-05-06",
+              "hora": "12:00",
+              "local": "Sucursal Sur",
+              "usuario": "lmartinez",
+              "productos": [
+                {
+                  "nombre": "Producto 4",
+                  "precio": 700,
+                  "cantidad": 1,
+                  "talle": "XL",
+                  "color": "Amarillo",
+                  "codigo": 10004
+                }
+              ],
+              "tipoDePago": "Tarjeta de Débito",
+              "total": 700
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nombre": "Sucursal Este",
+          "dirección": "Plaza Este 101, Buenos Aires",
+          "imagen": "http://example.com/images/sucursal_este.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor D",
+              "productos": [
+                {
+                  "nombre": "Producto 5",
+                  "precio": 800,
+                  "stock": 40,
+                  "categoria": "Categoría 2",
+                  "talle": "XS",
+                  "color": "Negro",
+                  "codigo": 10005
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Producto 5",
+              "precio": 800,
+              "stock": 40,
+              "categoria": "Categoría 2",
+              "talle": "XS",
+              "color": "Negro",
+              "codigo": 10005
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Carlos",
+              "apellido": "Gonzalez",
+              "nombreUsuario": "cgonzalez",
+              "rol": "admin"
+            },
+            {
+              "nombre": "Maria",
+              "apellido": "Perez",
+              "nombreUsuario": "mperez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": []
+        },
+        {
+          "id": 5,
+          "nombre": "Sucursal Oeste",
+          "dirección": "Calle Oeste 202, Buenos Aires",
+          "imagen": "http://example.com/images/sucursal_oeste.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor E",
+              "productos": [
+                {
+                  "nombre": "Producto 6",
+                  "precio": 900,
+                  "stock": 20,
+                  "categoria": "Categoría 2",
+                  "talle": "XXL",
+                  "color": "Blanco",
+                  "codigo": 10006
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Producto 6",
+              "precio": 900,
+              "stock": 20,
+              "categoria": "Categoría 2",
+              "talle": "XXL",
+              "color": "Blanco",
+              "codigo": 10006
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Maria",
+              "apellido": "Perez",
+              "nombreUsuario": "mperez",
+              "rol": "usuario"
+            },
+            {
+              "nombre": "Pedro",
+              "apellido": "Sanchez",
+              "nombreUsuario": "psanchez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": []
+        },
+        {
+          "id": 6,
+          "nombre": "Sucursal Centro",
+          "dirección": "Centro Comercial 303, Buenos Aires",
+          "imagen": "http://example.com/images/sucursal_centro.jpg",
+          "proveedores": [
+            {
+              "nombre": "Proveedor F",
+              "productos": [
+                {
+                  "nombre": "Producto 7",
+                  "precio": 1000,
+                  "stock": 10,
+                  "categoria": "Categoría 3",
+                  "talle": "S",
+                  "color": "Gris",
+                  "codigo": 10007
+                }
+              ]
+            }
+          ],
+          "productos": [
+            {
+              "nombre": "Producto 7",
+              "precio": 1000,
+              "stock": 10,
+              "categoria": "Categoría 3",
+              "talle": "S",
+              "color": "Gris",
+              "codigo": 10007
+            }
+          ],
+          "usuarios": [
+            {
+              "nombre": "Pedro",
+              "apellido": "Sanchez",
+              "nombreUsuario": "psanchez",
+              "rol": "usuario"
+            }
+          ],
+          "ventas": []
+        }
+      ]
+}

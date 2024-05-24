@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 import CabeceraComprobante from '../components/Venta/CabeceraComprobante';
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
+import PedidosProveedores_bd from '../bbdd/pedidosProveedores.json';
 import CabeceraProducto from '../components/Venta/CabeceraProducto';
 import LineaProducto from '../components/Venta/LineaProducto';
 import CabeceraHistorialVentas from '../components/Venta/CabeceraHistorialVentas';
@@ -18,8 +19,8 @@ function ProveedorPerfil() {
   const location = useLocation()
   const { id } = useParams();
   const [proveedor, setProveedor] = useState(location.state.proveedor);
-  const [local, setLocal] = useState(Data.locales.find(l => l.id === parseInt(id)));
-  const [pedidos, setPedidos] = useState(Data.pedidosProveedores.filter(p => ((p.proveedor.id === proveedor.id) && (p.local.id === parseInt(id)))))
+  const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
+  const [pedidos, setPedidos] = useState(PedidosProveedores_bd.pedidosProveedores.filter(p => ((p.proveedor.id === proveedor.id) && (p.local.id === parseInt(id)))))
   const [nro, setNro] = useState('');
   console.log("pedidos por proveedors:", pedidos)
   useEffect(() => {

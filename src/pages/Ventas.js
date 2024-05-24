@@ -3,13 +3,13 @@ import Navbar from '../components/Navbar';
 import LineaVenta from '../components/Venta/LineaVenta';
 import CabeceraHistorialVentas from '../components/Venta/CabeceraHistorialVentas';
 import CabeceraListadoVentas from '../components/Venta/CabeceraListadoVentas';
-import Data from '../bbdd/bbdd.json';
+import Ventas_bd from '../bbdd/ventas.json';
 import { useUser } from '../context/UsuarioContext';
 
 
 function Ventas() {
   
-  const [ventas, setVentas] = useState(Data.ventas)
+  const [ventas, setVentas] = useState(Ventas_bd.ventas)
 
   return (
     <>

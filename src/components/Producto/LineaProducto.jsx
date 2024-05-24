@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Data from '../../bbdd/bbdd.json';
+import Productos_bd from '../../bbdd/productos.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function LineaProducto({ producto,todos,cargarProducto }) {
-  const [prod,setProd] = useState(Data.productos.find(p => p.codigo === producto.codigo)) 
+  const [prod,setProd] = useState(Productos_bd.productos.find(p => p.codigo === producto.codigo)) 
   const [cantLocales, setCantLocales] = useState(producto.length)
 
   const handleClick = () => {

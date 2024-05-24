@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Icono from '../assets/icono.png';
 import { useNavigate } from 'react-router-dom';
-import Data from '../bbdd/bbdd.json';
+import Usuarios_bd from '../bbdd/usuarios.json';
 import { useUser } from '../context/UsuarioContext';
 
 function LoginForm() {
   const { setUsuarioCntxt,setIsAdmin } = useUser();
   console.log('loginstorage',localStorage.getItem('usuarioCntxt'))
   
-  const [users, setUsers] = useState(Data.usuarios)
+  const [users, setUsers] = useState(Usuarios_bd.usuarios)
   const [inputUser, setInputUser] = useState('cgonzalez');
   const [inputPass, setInputPass] = useState('tigre');
   const navigate = useNavigate();

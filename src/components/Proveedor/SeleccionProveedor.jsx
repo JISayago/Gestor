@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import LogoLocal from '../../assets/LogoLocal.png';
-import Data from '../../bbdd/bbdd.json';
+import Locales_bd from '../../bbdd/locales.json';
 
 function SeleccionProveedor() {
-    const [locales,setLocales] = useState(Data.locales)
+    const [locales,setLocales] = useState(Locales_bd.locales)
     const [color, setColor] = useState('bg-negro-2');
 
     const handleClick = () => {

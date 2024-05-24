@@ -1,0 +1,220 @@
+{
+    "proveedores": [
+        {
+          "id": 1,
+          "nombre": "Proveedor A",
+          "razonSocial": "Razón Social A",
+          "cuit": "1234567890",
+          "cuentaCorriente": "123-456789/0",
+          "email": "proveedora@example.com",
+          "rubro": "Rubro A",
+          "locales": [
+            {
+              "id": 1,
+              "nombre": "Local Central",
+              "productos": [
+                {
+                  "nombre": "Producto 1",
+                  "precio": 500,
+                  "stock": 100,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                },
+                {
+                  "nombre": "Producto 2",
+                  "precio": 750,
+                  "stock": 50,
+                  "categoria": "Categoría 2",
+                  "talle": "L",
+                  "color": "Azul",
+                  "codigo": 10002
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "nombre": "Sucursal Norte",
+              "productos": [
+                {
+                  "nombre": "Producto 3",
+                  "precio": 600,
+                  "stock": 80,
+                  "categoria": "Categoría 1",
+                  "talle": "S",
+                  "color": "Verde",
+                  "codigo": 10003
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Proveedor B",
+          "razonSocial": "Razón Social B",
+          "cuit": "0987654321",
+          "cuentaCorriente": "098-765432/1",
+          "email": "proveedorb@example.com",
+          "rubro": "Rubro B",
+          "locales": [
+            {
+              "id": 3,
+              "nombre": "Sucursal Sur",
+              "productos": [
+                {
+                  "nombre": "Producto 4",
+                  "precio": 700,
+                  "stock": 60,
+                  "categoria": "Categoría 2",
+                  "talle": "XL",
+                  "color": "Amarillo",
+                  "codigo": 10004
+                },
+                {
+                  "nombre": "Producto 1",
+                  "precio": 500,
+                  "stock": 100,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10001
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nombre": "Proveedor C",
+          "razonSocial": "Razón Social C",
+          "cuit": "1357924680",
+          "cuentaCorriente": "135-792468/0",
+          "email": "proveedorc@example.com",
+          "rubro": "Rubro C",
+          "locales": [
+            {
+              "id": 4,
+              "nombre": "Sucursal Este",
+              "productos": [
+                {
+                  "nombre": "Producto 5",
+                  "precio": 550,
+                  "stock": 90,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Gris",
+                  "codigo": 10005
+                },
+                {
+                  "nombre": "Producto 3",
+                  "precio": 600,
+                  "stock": 80,
+                  "categoria": "Categoría 1",
+                  "talle": "S",
+                  "color": "Verde",
+                  "codigo": 10003
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nombre": "Proveedor D",
+          "razonSocial": "Razón Social D",
+          "cuit": "2468135790",
+          "cuentaCorriente": "246-813579/0",
+          "email": "proveedord@example.com",
+          "rubro": "Rubro D",
+          "locales": [
+            {
+              "id": 5,
+              "nombre": "Sucursal Oeste",
+              "productos": [
+                {
+                  "nombre": "Producto 6",
+                  "precio": 620,
+                  "stock": 70,
+                  "categoria": "Categoría 1",
+                  "talle": "L",
+                  "color": "Azul Marino",
+                  "codigo": 10006
+                },
+                {
+                  "nombre": "Producto 7",
+                  "precio": 830,
+                  "stock": 40,
+                  "categoria": "Categoría 2",
+                  "talle": "XL",
+                  "color": "Negro",
+                  "codigo": 10007
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "nombre": "Proveedor E",
+          "razonSocial": "Razón Social E",
+          "cuit": "3692581470",
+          "cuentaCorriente": "369-258147/0",
+          "email": "proveedore@example.com",
+          "rubro": "Rubro E",
+          "locales": [
+            {
+              "id": 6,
+              "nombre": "Sucursal Centro",
+              "productos": [
+                {
+                  "nombre": "Producto 8",
+                  "precio": 660,
+                  "stock": 75,
+                  "categoria": "Categoría 1",
+                  "talle": "M",
+                  "color": "Rojo",
+                  "codigo": 10008
+                },
+                {
+                  "nombre": "Producto 9",
+                  "precio": 880,
+                  "stock": 35,
+                  "categoria": "Categoría 2",
+                  "talle": "XL",
+                  "color": "Negro",
+                  "codigo": 10009
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "nombre": "Proveedor F",
+          "razonSocial": "Razón Social F",
+          "cuit": "6874567890",
+          "cuentaCorriente": "321-444489/0",
+          "email": "proveedorf@example.com",
+          "rubro": "Rubro F",
+          "locales": [
+            {
+              "id": 7,
+              "nombre": "Sucursal Oeste",
+              "productos": [
+                {
+                  "nombre": "Producto 10",
+                  "precio": 720,
+                  "stock": 55,
+                  "categoria": "Categoría 1",
+                  "talle": "S",
+                  "color": "Verde",
+                  "codigo": 10010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+}

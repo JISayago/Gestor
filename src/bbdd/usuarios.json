@@ -1,0 +1,156 @@
+{
+    "usuarios": [
+        {
+          "nombre": "Carlos",
+          "apellido": "Gonzalez",
+          "telefono": "+5491162345678",
+          "dni": "12345678",
+          "email": "carlos.gonzalez@example.com",
+          "nombreUsuario": "cgonzalez",
+          "contrasena": "tigre",
+          "rol": "admin",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZ29uemFsZXoiLCJyb2wiOiJhZG1pbiIsImlhdCI6MTY3MTIzNDU2M30.9SfUdfEAPDZ5M7L9E6ECm56wRJQl7P3cR5n9qxkJE9c",
+          "imgPerfilIndex": -1,
+          "locales": [
+            {
+              "id": 1,
+              "nombre": "Local Central",
+              "direccion": "Avenida Siempreviva 123, Buenos Aires",
+              "imagen": "http://example.com/images/local_central.jpg"
+            },
+            {
+              "id": 2,
+              "nombre": "Sucursal Norte",
+              "dirección": "Calle Falsa 456, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_norte.jpg"
+            },
+            {
+              "id": 3,
+              "nombre": "Sucursal Sur",
+              "dirección": "Boulevard Sur 789, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_sur.jpg"
+            },
+            {
+              "id": 4,
+              "nombre": "Sucursal Este",
+              "dirección": "Plaza Este 101, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_este.jpg"
+            },
+            {
+              "id": 5,
+              "nombre": "Sucursal Oeste",
+              "dirección": "Calle Oeste 202, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_oeste.jpg"
+            },
+            {
+              "id": 6,
+              "nombre": "Sucursal Centro",
+              "dirección": "Centro Comercial 303, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_centro.jpg"
+            }
+          ],
+          "ventasRealizadas": 3,
+          "estado": "habilitado"
+        },
+        {
+          "nombre": "Maria",
+          "apellido": "Perez",
+          "telefono": "+5491176543210",
+          "dni": "87654321",
+          "email": "maria.perez@example.com",
+          "nombreUsuario": "mperez",
+          "contrasena": "leon",
+          "rol": "usuario",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtcGVyZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.YfbxxBd_c2A8RoO2Z6WxBPW5_bqKAAkptXJyxC9IhFY",
+          "imgPerfilIndex": -1,
+          "locales": [
+            {
+              "id": 2,
+              "nombre": "Sucursal Norte",
+              "dirección": "Calle Falsa 456, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_norte.jpg"
+            },
+            {
+              "id": 4,
+              "nombre": "Sucursal Este",
+              "dirección": "Plaza Este 101, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_este.jpg"
+            }
+          ],
+          "ventasRealizadas": 1,
+          "estado": "habilitado"
+        },
+        {
+          "nombre": "Juan",
+          "apellido": "Lopez",
+          "telefono": "+5491123456789",
+          "dni": "23456789",
+          "email": "juan.lopez@example.com",
+          "nombreUsuario": "jlopez",
+          "contrasena": "panda",
+          "rol": "usuario",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqbG9wZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.uFlVO1XfrNGTxT-hWZHJcNxuxMGf_UoA8alhj7IQZhs",
+          "imgPerfilIndex": -1,
+          "locales": [
+            {
+              "id": 1,
+              "nombre": "Local Central",
+              "dirección": "Avenida Siempreviva 123, Buenos Aires",
+              "imagen": "http://example.com/images/local_central.jpg"
+            }
+          ],
+          "ventasRealizadas": 3,
+          "estado": "habilitado"
+        },
+        {
+          "nombre": "Lucia",
+          "apellido": "Martinez",
+          "telefono": "+5491134567890",
+          "dni": "34567890",
+          "email": "lucia.martinez@example.com",
+          "nombreUsuario": "lmartinez",
+          "contrasena": "loro",
+          "rol": "usuario",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsbWFydGluZXoiLCJyb2wiOiJ1c3VhcmlvIiwiaWF0IjoxNjcxMjM0NTYzfQ.F7W7AcTcUZjxBhchFGxZO8GdkjVcONy8Hfqv12BG_0I",
+          "imgPerfilIndex": -1,
+          "locales": [
+            {
+              "id": 3,
+              "nombre": "Sucursal Sur",
+              "dirección": "Boulevard Sur 789, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_sur.jpg"
+            }
+          ],
+          "ventasRealizadas": 1,
+          "estado": "habilitado"
+        },
+        {
+          "nombre": "Pedro",
+          "apellido": "Sanchez",
+          "telefono": "+5491145678901",
+          "dni": "45678901",
+          "email": "pedro.sanchez@example.com",
+          "nombreUsuario": "psanche222222222z",
+          "contrasena": "ballena",
+          "rol": "usuario",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwc2FuY2hzeiIsImlhdCI6MTY3MTIzNDU2M30.owYSD6q7QtwySpw0uDgThAOrsVc8y6aA3kO9z1Y_4jk",
+          "imgPerfilIndex": -1,
+          "locales": [
+            {
+              "id": 5,
+              "nombre": "Sucursal Oeste",
+              "dirección": "Calle Oeste 202, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_oeste.jpg"
+            },
+            {
+              "id": 6,
+              "nombre": "Sucursal Centro",
+              "dirección": "Centro Comercial 303, Buenos Aires",
+              "imagen": "http://example.com/images/sucursal_centro.jpg"
+            }
+          ],
+          "ventasRealizadas": 0,
+          "estado": "habilitado"
+        }
+      ]
+}
