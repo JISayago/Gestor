@@ -42,7 +42,7 @@ function App() {
     
     <Route path="/productos" element={<Autenticacion><Productos /></Autenticacion>} />
     
-    <Route path="/usuarios" element={<Autenticacion><AutenticacionRol><Productos /></AutenticacionRol></Autenticacion>} />
+    <Route path="/usuarios" element={<Autenticacion><AutenticacionRol><Usuarios /></AutenticacionRol></Autenticacion>} />
     <Route path="/proveedores" element={<Autenticacion><AutenticacionRol><Proveedores /></AutenticacionRol></Autenticacion>}/>
     <Route path="/pedidos" element={<Autenticacion><AutenticacionRol><Pedidos /></AutenticacionRol></Autenticacion>}/>
     <Route path="/ventas" element={<Autenticacion><AutenticacionRol><Ventas /></AutenticacionRol></Autenticacion>} />
