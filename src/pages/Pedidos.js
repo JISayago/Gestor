@@ -3,12 +3,12 @@ import Navbar from '../components/Navbar';
 import CabeceraListadoProveedor from '../components/Proveedor/CabeceraListadoProveedor';
 import CabeceraPedidos from '../components/Pedidos/CabeceraPedidos';
 import LineaPedido from '../components/Pedidos/LineaPedido';
-import Data from '../bbdd/bbdd.json';
+import PedidosProveedores_bd from '../bbdd/pedidosProveedores.json';
 import { useUser } from '../context/UsuarioContext';
 import { useNavigate } from 'react-router-dom';
 
 function Pedidos() {
-  const [pedidos, setPedidos] = useState(Data.pedidosProveedores);
+  const [pedidos, setPedidos] = useState(PedidosProveedores_bd.pedidosProveedores);
   const [titulo,setTitulo] = useState(false)
   
 

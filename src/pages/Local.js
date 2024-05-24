@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import OpcionLocal from '../components/Local/OpcionLocal';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
 import '../css/input.css'
 
 function Local() {
   const { id } = useParams()
   const location = useLocation()
-  const [local, setLocal] = useState(Data.locales.find(l => l.id === parseInt(id)))
+  const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)))
   return (
     <>
  <Navbar/>

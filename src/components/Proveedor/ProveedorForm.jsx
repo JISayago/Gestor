@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Data from '../../bbdd/bbdd.json';
 import LocalUsuarioForm from '../Usuario/LocalUsuarioForm';
 function ProveedorForm({titulo,locales,nombre,setNombre,razonSocial,setRazonSocial,rubro,setRubro,cuit,setCuit,email,setEmail,ctacte,setCtaCte,localesAsignados,setLocalesAsignados,handleInputChange,usuarioEditar}) {
   return (

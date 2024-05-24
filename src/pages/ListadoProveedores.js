@@ -4,7 +4,8 @@ import CabeceraListadoProveedor from '../components/Proveedor/CabeceraListadoPro
 import CabeceraProveedores from '../components/Proveedor/CabeceraProveedores'
 import LineaProveedor from '../components/Proveedor/LineaProveedor'
 import { useParams } from 'react-router-dom';
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
+import Proveedores_bd from '../bbdd/proveedores.json';
 
 function ListadoProveedores() {
   const { id } = useParams();
@@ -13,8 +14,8 @@ function ListadoProveedores() {
   const [titulo ,setTitulo] = useState(true)
 
   useState(() => {
-    setProveedores(Data.proveedores.filter(proveedor => proveedor.locales.some(local => local.id === parseInt(id))));
-    setLocal(Data.locales.find(l => l.id === parseInt(id)).nombre);
+    setProveedores(Proveedores_bd.proveedores.filter(proveedor => proveedor.locales.some(local => local.id === parseInt(id))));
+    setLocal(Locales_bd.locales.find(l => l.id === parseInt(id)).nombre);
     
   },proveedores)
   return (

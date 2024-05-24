@@ -4,13 +4,14 @@ import CabeceraListadoProveedor from '../components/Proveedor/CabeceraListadoPro
 import CabeceraProveedores from '../components/Proveedor/CabeceraProveedores'
 import ProveedorForm from '../components/Proveedor/ProveedorForm'
 import LineaProveedor from '../components/Proveedor/LineaProveedor'
-import Data from '../bbdd/bbdd.json';
+import Proveedores_bd from '../bbdd/proveedores.json';
+import Locales_bd from '../bbdd/locales.json';
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UsuarioContext'
 
 function Proveedores() {
-  const [proveedores, setProveedores] = useState(Data.proveedores);
-  const [locales,setLocales] =useState(Data.locales)
+  const [proveedores, setProveedores] = useState(Proveedores_bd.proveedores);
+  const [locales,setLocales] =useState(Locales_bd.locales)
   const [titulo, setTitulo] = useState('Agregar Proveedor');
   const [editar, setEditar] = useState(false);
   const [proveedorEditar,setProvedorEditar] = useState({})

@@ -3,14 +3,14 @@ import Navbar from '../components/Navbar'
 import CabeceraListadoProductos from '../components/Producto/CabeceraListadoProductos'
 import CabeceraProductos from '../components/Producto/CabeceraProductos'
 import LineaProducto from '../components/Producto/LineaProducto'
-import Data from '../bbdd/bbdd.json';
+import Productos_bd from '../bbdd/productos.json';
 import { useUser } from '../context/UsuarioContext'
 import { useNavigate } from 'react-router-dom'
 
 function Productos() {
   const { usuarioCntxt } = useUser();
   const navigate = useNavigate();
-  const [productos, setProductos] = useState(Data.productos)
+  const [productos, setProductos] = useState(Productos_bd.productos)
 
   useEffect(() => {
     (!usuarioCntxt && (!usuarioCntxt.rol === "admin") && navigate('/limitado'));

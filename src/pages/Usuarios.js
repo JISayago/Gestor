@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar';
 import UsuarioForm from '../components/Usuario/UsuarioForm';
 import CabeceraListadoUsuarios from '../components/Usuario/CabeceraListadoUsuarios';
 import LineaUsuario from '../components/Usuario/LineaUsuario';
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
+import Usuarios_bd from '../bbdd/usuarios.json';
 import CabeceraUsuarios from '../components/Usuario/CabeceraUsuarios';
 import { useUser } from '../context/UsuarioContext';
 import { useNavigate } from 'react-router-dom';
@@ -12,8 +13,8 @@ import { useNavigate } from 'react-router-dom';
 function Usuarios() {
   const { usuarioCntxt } = useUser();
   const navigate = useNavigate();
-  const [locales, setLocales] = useState(Data.locales);
-  const [usuarios, setUsuarios] = useState(Data.usuarios)
+  const [locales, setLocales] = useState(Locales_bd.locales);
+  const [usuarios, setUsuarios] = useState(Usuarios_bd.usuarios)
   const [titulo, setTitulo] = useState('Agregar Usuario');
   const [editar, setEditar] = useState(false);
   const [usuarioEditar,setUsuarioEditar] = useState({})

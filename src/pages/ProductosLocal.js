@@ -8,12 +8,12 @@ import CabeceraListadoProductos from '../components/Producto/CabeceraListadoProd
 import CabeceraProductos from '../components/Producto/CabeceraProductos'
 import LineaProducto from '../components/Producto/LineaProducto'
 import { useParams } from 'react-router-dom'
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
 
 function ProductosLocal() {
   const { id } = useParams();
-  const [local, setLocal] = useState(Data.locales.find(l => l.id === parseInt(id)));
-  const [locales, setLocales] = useState(Data.locales);
+  const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
+  const [locales, setLocales] = useState(Locales_bd.locales);
   const [productos, setProductos] = useState(local.productos)
   const [titulo, setTitulo] = useState('Agregar Usuario');
   const [editar, setEditar] = useState(false);

@@ -3,13 +3,14 @@ import CabeceraListadoUsuarios from '../components/Usuario/CabeceraListadoUsuari
 import CabeceraUsuarios from '../components/Usuario/CabeceraUsuarios';
 import LineaUsuario from '../components/Usuario/LineaUsuario';
 import { useParams } from 'react-router-dom';
-import Data from '../bbdd/bbdd.json';
+import Locales_bd from '../bbdd/locales.json';
+import Usuarios_bd from '../bbdd/usuarios.json';
 import Navbar from '../components/Navbar';
 
 function UsuarioLocal() {
   const { id } = useParams();
-  const [local, setLocal] = useState(Data.locales.find(l => l.id === parseInt(id)));
-  const [usuarios, setUsuarios] = useState(Data.usuarios.filter(usuario => usuario.locales.some(local => local.id === parseInt(id))));
+  const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
+  const [usuarios, setUsuarios] = useState(Usuarios_bd.usuarios.filter(usuario => usuario.locales.some(local => local.id === parseInt(id))));
   const cargarUsuario = "";
 
   return (
