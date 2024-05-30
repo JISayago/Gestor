@@ -16,7 +16,7 @@ function VentasLocal() {
   const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
   const [ventas, setVentas] = useState(local.ventas);
   const [nro, setNro] = useState();
-  const [lineasProducto, setLineasProducto] = useState([]);
+  const [lineasProducto, setLineasProducto] = useState([null]);
 
   useEffect(() => {
     const ultimoNro = ventas.reduce((max, item) => {
@@ -30,30 +30,66 @@ function VentasLocal() {
   }, [ventas]);
 
   const agregarLineaProducto = () => {
-    setLineasProducto([...lineasProducto, {}]);
+    setLineasProducto([...lineasProducto, null]);
+  };
+
+  const eliminarLineaProducto = (index) => {
+    if (lineasProducto.length > 1) {
+      setLineasProducto(lineasProducto.filter((_, i) => i !== index));
+    } else {
+      const nuevasLineasProducto = [...lineasProducto];
+      nuevasLineasProducto[index] = null;
+      setLineasProducto(nuevasLineasProducto);
+    }
+  };
+
+  const actualizarLineaProducto = (index, producto) => {
+    const nuevasLineasProducto = [...lineasProducto];
+    nuevasLineasProducto[index] = producto;
+    setLineasProducto(nuevasLineasProducto);
+  };
+
+  const calcularTotalVenta = () => {
+    return lineasProducto.reduce((total, producto) => {
+      if (producto && producto.cantidad) { // Asegurar que el producto y su cantidad existan
+        return total + (producto.precio * producto.cantidad); // Multiplicar precio por cantidad
+      } else {
+        return total;
+      }
+    }, 0);
   };
 
   return (
     <>
       <Navbar />
       <div className="w-full h-screen bg-negro-2 flex flex-col p-3">
-        {/* División para el formulario */}
+        {/* Sección para el formulario */}
         <div className="w-full h-1/2 rounded-lg border-2 border-color-1">
           <CabeceraComprobante nro={nro} local={local} venta={""} textoTipo={'N° Venta: '}/>
           <div className='hidden md:flex md:flex-col md:bg-negro-2 md:h-4/6 md:rounded-b-lg md:border md:border-negro-2 '>
             {/*Contenido - Grilla*/}
             <div className='w-full pr-4'>
-            <CabeceraProducto />
+              <CabeceraProducto />
             </div>
             <div className='w-full overflow-y-auto'>
-            {lineasProducto.map((_, index) => (
-              <LineaProducto key={index} />
-            ))}
+              {lineasProducto.map((producto, index) => (
+                <LineaProducto
+                  key={index}
+                  index={index}
+                  producto={producto}
+                  onEliminar={eliminarLineaProducto}
+                  onActualizar={actualizarLineaProducto}
+                />
+              ))}
             </div>
             <div className='w-full flex flex-row justify-center mt-2'>
-            <button onClick={agregarLineaProducto} className="p-2 bg-transparent text-color-4 text-2xl">
-            <FontAwesomeIcon icon="fa-solid fa-plus" />
-            </button>
+              <button onClick={agregarLineaProducto} className="p-2 bg-transparent text-color-4 text-2xl">
+                <FontAwesomeIcon icon="fa-solid fa-plus" />
+              </button>
+            </div>
+            <div className='bg-transparent w-1/5 self-end h-14 flex justify-end border border-negro-2'>
+              <label className='text-white text-lg mx-5'>Total:</label>
+              <label className='font-bold text-color-4 text-xl mr-5'>{`$ ${calcularTotalVenta()}`}</label>
             </div>
           </div>
           <div className='flex w-full h-1/6 justify-between p-3'>
@@ -63,6 +99,7 @@ function VentasLocal() {
             </div>
           </div>
         </div>
+
         {/* División para el historial de ventas */}
         <div className="flex flex-col w-full h-1/2 ">
           <CabeceraHistorialVentas />
