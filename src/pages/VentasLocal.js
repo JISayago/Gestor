@@ -10,6 +10,7 @@ import LineaVenta from '../components/Venta/LineaVenta';
 import { useParams } from 'react-router-dom';
 import Locales_bd from '../bbdd/locales.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useUser } from '../context/UsuarioContext';
 
 function VentasLocal() {
   const { id } = useParams();
@@ -17,6 +18,7 @@ function VentasLocal() {
   const [ventas, setVentas] = useState(local.ventas);
   const [nro, setNro] = useState();
   const [lineasProducto, setLineasProducto] = useState([null]);
+  const { usuarioCntxt } = useUser();
 
   useEffect(() => {
     const ultimoNro = ventas.reduce((max, item) => {
@@ -27,6 +29,11 @@ function VentasLocal() {
     const numeroIncrementado = ultimoNro + 1;
     const parteNumericaNueva = numeroIncrementado.toString().padStart(ventas[0].numeroComprobante.split('/')[0].length, '0');
     setNro(parteNumericaNueva);
+  }, [ventas]);
+
+  useEffect(() => {
+    // Almacenar ventas en localStorage
+    localStorage.setItem('ventas', JSON.stringify(ventas));
   }, [ventas]);
 
   const agregarLineaProducto = () => {
@@ -57,6 +64,45 @@ function VentasLocal() {
         return total;
       }
     }, 0);
+  };
+
+  const generarCompra = () => {
+    const fecha = new Date();
+
+// Obtener el día, mes y año
+const dia = fecha.getDate();
+const mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, por lo que se suma 1
+const año = fecha.getFullYear();
+
+// Formatear la fecha con el formato día-mes-año
+    const fechaFormateada = `${dia < 10 ? '0' + dia : dia}-${mes < 10 ? '0' + mes : mes}-${año}`;
+    
+    // Obtener la hora, minutos y segundos
+const hora = fecha.getHours();
+const minutos = fecha.getMinutes();
+const segundos = fecha.getSeconds();
+
+// Formatear la hora con el formato hora:minutos:segundos
+const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + minutos : minutos}:${segundos < 10 ? '0' + segundos : segundos}`;
+
+    // Construir venta con los productos de las líneas de producto
+    const nuevaVenta = {
+      id: ventas.length + 1, // Asignar un nuevo ID único
+      numeroComprobante: `${nro}/${local.id}`, // Usar el número de comprobante generado
+      fecha: fechaFormateada,
+      hora: horaFormateada,
+      local: local.nombre,
+      usuario: usuarioCntxt.nombreUsuario,
+      productos: lineasProducto.filter(producto => producto !== null), // Filtrar productos no nulos
+      tipoDePago:'Efectivo',
+      total: calcularTotalVenta(), // Calcular el total de la venta
+    };
+
+    // Agregar la nueva venta a la lista de ventas
+    setVentas([...ventas, nuevaVenta]);
+
+    // Reiniciar las líneas de producto
+    setLineasProducto([null]);
   };
 
   return (
@@ -95,7 +141,7 @@ function VentasLocal() {
           <div className='flex w-full h-1/6 justify-between p-3'>
             <BotonesFormaPago />
             <div className=''>
-              <button className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
+              <button onClick={generarCompra} className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
             </div>
           </div>
         </div>
