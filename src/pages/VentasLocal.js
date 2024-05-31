@@ -19,7 +19,9 @@ function VentasLocal() {
   const [nro, setNro] = useState();
   const [lineasProducto, setLineasProducto] = useState([null]);
   const { usuarioCntxt } = useUser();
+  const [tipoPago, setTipoPago] = useState('-');
 
+  console.log(tipoPago)
   useEffect(() => {
     const ultimoNro = ventas.reduce((max, item) => {
       const partes = item.numeroComprobante.split('/');
@@ -66,6 +68,10 @@ function VentasLocal() {
     }, 0);
   };
 
+  const handleTipoPago = (tipo) => {
+    setTipoPago(tipo)
+  } 
+
   const generarCompra = () => {
     const fecha = new Date();
 
@@ -94,7 +100,7 @@ const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + 
       local: local.nombre,
       usuario: usuarioCntxt.nombreUsuario,
       productos: lineasProducto.filter(producto => producto !== null), // Filtrar productos no nulos
-      tipoDePago:'Efectivo',
+      tipoDePago:tipoPago,
       total: calcularTotalVenta(), // Calcular el total de la venta
     };
 
@@ -139,7 +145,7 @@ const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + 
             </div>
           </div>
           <div className='flex w-full h-1/6 justify-between p-3'>
-            <BotonesFormaPago />
+            <BotonesFormaPago handleTipoPago={handleTipoPago} />
             <div className=''>
               <button onClick={generarCompra} className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
             </div>
