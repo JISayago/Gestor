@@ -25,10 +25,6 @@ function Usuarios() {
   const [telefono, setTelefono] = useState('');
   const [localesAsignados, setLocalesAsignados] = useState([]);
 
-  useEffect(() => {
-    const rol = localStorage.getItem('usuarioCntxt').rol
-  },[usuarioCntxt])
-
   // Función para manejar el cambio de valores en los campos del formulario
   const handleInputChange = (event, setValue) => {
     setValue(event.target.value);
