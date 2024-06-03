@@ -6,11 +6,8 @@ import { useUser } from '../context/UsuarioContext';
 import '../css/input.css'
 
 const Autenticacion = ({ children }) => {
-  const { usuarioCntxt, isLoading } = useUser();
+  const { usuarioCntxt} = useUser();
 
-  if (isLoading) {
-    return <div>Cargando...</div>; // Muestra un mensaje o spinner de carga mientras se verifica el usuario
-  }
 
   if (!usuarioCntxt) {
     return <Navigate to="/login" replace />;

@@ -31,9 +31,7 @@ export const UsuarioProvider = ({ children }) => {
         localStorage.setItem('usuarioCntxt', JSON.stringify(parsedUser));
       }
       parsedUser.rol === "admin" && setIsAdmin(true);
-    } else {
-      setIsLoading(false); // Cambia el estado de carga a false después de intentar cargar el usuario
-    }
+    } 
   }, []);
 
   // Guardar el usuario en localStorage cuando cambie
@@ -54,7 +52,7 @@ export const UsuarioProvider = ({ children }) => {
   }, [usuarioCntxt]);
 
   return (
-    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isLoading, isAdmin, setIsAdmin }}>
+    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isAdmin, setIsAdmin }}>
       {children}
     </UsuarioContext.Provider>
   );
