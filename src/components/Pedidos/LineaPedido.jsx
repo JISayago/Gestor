@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function LineaPedido({ pedido }) {
-   console.log("linea Pedido",pedido)
     const navigate = useNavigate()
     const [nro, setNro] = useState();
 
