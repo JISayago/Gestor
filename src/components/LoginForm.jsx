@@ -6,7 +6,6 @@ import { useUser } from '../context/UsuarioContext';
 
 function LoginForm() {
   const { setUsuarioCntxt,setIsAdmin } = useUser();
-  console.log('loginstorage',localStorage.getItem('usuarioCntxt'))
   
   const [users, setUsers] = useState(Usuarios_bd.usuarios)
   const [inputUser, setInputUser] = useState('cgonzalez');

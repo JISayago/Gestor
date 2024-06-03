@@ -9,7 +9,22 @@ import { useUser } from '../context/UsuarioContext';
 
 function Ventas() {
   
-  const [ventas, setVentas] = useState(Ventas_bd.ventas)
+  const [ventas, setVentas] = useState([])
+
+  useEffect(() => {
+    // Extraer todas las ventas de cada sucursal
+    const allVentas = Ventas_bd.ventas;
+
+    // Ordenar las ventas por fecha más reciente primero
+    const sortedVentas = allVentas.sort((a, b) => {
+      const dateA = new Date(a.fecha.split('-').reverse().join('-'));
+      const dateB = new Date(b.fecha.split('-').reverse().join('-'));
+      return dateB - dateA;
+    });
+
+    setVentas(sortedVentas);
+  }, []);
+
 
   return (
     <>
