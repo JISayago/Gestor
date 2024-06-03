@@ -15,13 +15,37 @@ import { useUser } from '../context/UsuarioContext';
 function VentasLocal() {
   const { id } = useParams();
   const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
-  const [ventas, setVentas] = useState(local.ventas);
+  const [ventas, setVentas] = useState([]);
   const [nro, setNro] = useState();
   const [lineasProducto, setLineasProducto] = useState([null]);
   const { usuarioCntxt } = useUser();
   const [tipoPago, setTipoPago] = useState('-');
+  
+  useEffect(() => {
+    // Almacenar ventas en localStorage
+    localStorage.setItem('ventas', JSON.stringify(ventas));
+  }, [ventas]);
 
-  console.log(tipoPago)
+  useEffect(() => {
+    if (local) {
+      // Obtener ventas almacenadas en localStorage
+      const storedVentas = JSON.parse(localStorage.getItem('ventas')) || [];
+      // Si hay ventas almacenadas, ordenarlas por fecha más reciente primero
+      const sortedVentas = [...storedVentas].sort((a, b) => {
+        const dateA = new Date(a.fecha.split('-').reverse().join('-'));
+        const dateB = new Date(b.fecha.split('-').reverse().join('-'));
+        return dateB - dateA;
+      });
+      const sortedVentas2 = [...local.ventas].sort((a, b) => {
+        const dateA = new Date(a.fecha.split('-').reverse().join('-'));
+        const dateB = new Date(b.fecha.split('-').reverse().join('-'));
+        return dateB - dateA;
+      });
+      // Si hay ventas almacenadas, establecerlas como las ventas actuales
+      setVentas(sortedVentas.length > 0 ? sortedVentas : sortedVentas2);
+    }
+  }, [local]);
+
   useEffect(() => {
     const ultimoNro = ventas.reduce((max, item) => {
       const partes = item.numeroComprobante.split('/');
@@ -29,15 +53,12 @@ function VentasLocal() {
       return Math.max(max, numeroParte);
     }, 0);
     const numeroIncrementado = ultimoNro + 1;
-    const parteNumericaNueva = numeroIncrementado.toString().padStart(ventas[0].numeroComprobante.split('/')[0].length, '0');
+    const parteNumericaNueva = numeroIncrementado.toString().padStart(ventas[0]?.numeroComprobante.split('/')[0].length || 1, '0');
     setNro(parteNumericaNueva);
   }, [ventas]);
 
-  useEffect(() => {
-    // Almacenar ventas en localStorage
-    localStorage.setItem('ventas', JSON.stringify(ventas));
-  }, [ventas]);
 
+ 
   const agregarLineaProducto = () => {
     setLineasProducto([...lineasProducto, null]);
   };
@@ -75,21 +96,21 @@ function VentasLocal() {
   const generarCompra = () => {
     const fecha = new Date();
 
-// Obtener el día, mes y año
-const dia = fecha.getDate();
-const mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, por lo que se suma 1
-const año = fecha.getFullYear();
+    // Obtener el día, mes y año
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, por lo que se suma 1
+    const año = fecha.getFullYear();
 
-// Formatear la fecha con el formato día-mes-año
+    // Formatear la fecha con el formato día-mes-año
     const fechaFormateada = `${dia < 10 ? '0' + dia : dia}-${mes < 10 ? '0' + mes : mes}-${año}`;
     
     // Obtener la hora, minutos y segundos
-const hora = fecha.getHours();
-const minutos = fecha.getMinutes();
-const segundos = fecha.getSeconds();
+    const hora = fecha.getHours();
+    const minutos = fecha.getMinutes();
+    const segundos = fecha.getSeconds();
 
-// Formatear la hora con el formato hora:minutos:segundos
-const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + minutos : minutos}:${segundos < 10 ? '0' + segundos : segundos}`;
+    // Formatear la hora con el formato hora:minutos:segundos
+    const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + minutos : minutos}:${segundos < 10 ? '0' + segundos : segundos}`;
 
     // Construir venta con los productos de las líneas de producto
     const nuevaVenta = {
@@ -104,8 +125,8 @@ const horaFormateada = `${hora < 10 ? '0' + hora : hora}:${minutos < 10 ? '0' + 
       total: calcularTotalVenta(), // Calcular el total de la venta
     };
 
-    // Agregar la nueva venta a la lista de ventas
-    setVentas([...ventas, nuevaVenta]);
+    // Agregar la nueva venta al inicio de la lista de ventas
+    setVentas([nuevaVenta, ...ventas]);
 
     // Reiniciar las líneas de producto
     setLineasProducto([null]);
