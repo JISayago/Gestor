@@ -18,11 +18,11 @@ export const UsuarioProvider = ({ children }) => {
   // Cargar el usuario del localStorage al montar el componente
   useEffect(() => {
     const savedUser = localStorage.getItem('usuarioCntxt');
-    console.log('savedUSer antes del if',savedUser)
+    console.log('savedUser antes del if:', savedUser);
     
     if (savedUser) {
       const parsedUser = JSON.parse(savedUser);
-      console.log('savedUSer despues del if',savedUser)
+      console.log('parsedUser después del if:', parsedUser);
       setUsuarioCntxt(parsedUser);
       const savedIndex = parsedUser.imgPerfilIndex;
       if (savedIndex >= 0 && savedIndex < imgPerfil.length) {
@@ -34,16 +34,14 @@ export const UsuarioProvider = ({ children }) => {
         localStorage.setItem('usuarioCntxt', JSON.stringify(parsedUser));
       }
       parsedUser.rol === "admin" && setIsAdmin(true);
-    } else {
-      console.log('savedUSer despues del else',savedUser)
-      setIsLoading(false); // Cambia el estado de carga a false después de intentar cargar el usuario
     }
+    setIsLoading(false); // Cambia el estado de carga a false después de intentar cargar el usuario
   }, []);
   
   // Guardar el usuario en localStorage cuando cambie
   useEffect(() => {
     if (usuarioCntxt) {
-      console.log('usuarioCntxt si es que entra al context',usuarioCntxt)
+      console.log('usuarioCntxt en el context:', usuarioCntxt);
       const updatedUser = { ...usuarioCntxt }; // Clonar el usuario para no modificar el estado directamente
       if (updatedUser.imgPerfilIndex === -1) {
         const randomIndex = Math.floor(Math.random() * imgPerfil.length);
@@ -56,6 +54,7 @@ export const UsuarioProvider = ({ children }) => {
       localStorage.removeItem('usuarioCntxt');
       setIsAdmin(false);
     }
+    setIsLoading(false); // Asegúrate de que isLoading se actualice correctamente aquí también
   }, [usuarioCntxt]);
 
   return (
