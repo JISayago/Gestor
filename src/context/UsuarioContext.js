@@ -18,8 +18,11 @@ export const UsuarioProvider = ({ children }) => {
   // Cargar el usuario del localStorage al montar el componente
   useEffect(() => {
     const savedUser = localStorage.getItem('usuarioCntxt');
+    console.log('savedUSer antes del if',savedUser)
+    
     if (savedUser) {
       const parsedUser = JSON.parse(savedUser);
+      console.log('savedUSer despues del if',savedUser)
       setUsuarioCntxt(parsedUser);
       const savedIndex = parsedUser.imgPerfilIndex;
       if (savedIndex >= 0 && savedIndex < imgPerfil.length) {
@@ -31,12 +34,16 @@ export const UsuarioProvider = ({ children }) => {
         localStorage.setItem('usuarioCntxt', JSON.stringify(parsedUser));
       }
       parsedUser.rol === "admin" && setIsAdmin(true);
-    } 
+    } else {
+      console.log('savedUSer despues del else',savedUser)
+      setIsLoading(false); // Cambia el estado de carga a false después de intentar cargar el usuario
+    }
   }, []);
-
+  
   // Guardar el usuario en localStorage cuando cambie
   useEffect(() => {
     if (usuarioCntxt) {
+      console.log('usuarioCntxt si es que entra al context',usuarioCntxt)
       const updatedUser = { ...usuarioCntxt }; // Clonar el usuario para no modificar el estado directamente
       if (updatedUser.imgPerfilIndex === -1) {
         const randomIndex = Math.floor(Math.random() * imgPerfil.length);
@@ -52,7 +59,7 @@ export const UsuarioProvider = ({ children }) => {
   }, [usuarioCntxt]);
 
   return (
-    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isAdmin, setIsAdmin }}>
+    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isLoading, isAdmin, setIsAdmin }}>
       {children}
     </UsuarioContext.Provider>
   );
