@@ -19,7 +19,7 @@ function VentasLocal() {
   const [nro, setNro] = useState();
   const [lineasProducto, setLineasProducto] = useState([null]);
   const { usuarioCntxt } = useUser();
-  const [tipoPago, setTipoPago] = useState('-');
+  const [tipoPago, setTipoPago] = useState('Efectivo');
   
   useEffect(() => {
     // Almacenar ventas en localStorage

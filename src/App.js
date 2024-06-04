@@ -25,8 +25,6 @@ import AutenticacionRol from "./components/AutenticacionRol.jsx";
 
 
 function App() {
-  const { isAdmin } = useUser();
-  
   return (
     <Routes>
     <Route path="/" element={<Autenticacion><Locales /></Autenticacion>}/>
