@@ -13,16 +13,22 @@ import CabeceraListadoProveedor from '../components/Proveedor/CabeceraListadoPro
 import CabeceraProveedores from '../components/Proveedor/CabeceraProveedores';
 import CabeceraPedidos from '../components/Pedidos/CabeceraPedidos';
 import LineaPedido from '../components/Pedidos/LineaPedido';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function ProveedorPerfil() {
-
+  
   const location = useLocation()
   const { id } = useParams();
   const [proveedor, setProveedor] = useState(location.state.proveedor);
   const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
   const [pedidos, setPedidos] = useState(PedidosProveedores_bd.pedidosProveedores.filter(p => ((p.proveedor.id === proveedor.id) && (p.local.id === parseInt(id)))))
   const [nro, setNro] = useState('');
-  console.log("pedidos por proveedors:", pedidos)
+
+  const [ventas, setVentas] = useState([]);
+  const [lineasProducto, setLineasProducto] = useState([null]);
+  const [tipoPago, setTipoPago] = useState('Efectivo');
+
+
   useEffect(() => {
     if (pedidos.length < 1) { return setNro("0001"); }
      pedidos.map(item => {
@@ -35,7 +41,27 @@ function ProveedorPerfil() {
       //return setNro(`${parteNumericaNueva}/${partes[1]}`);
         
     })
-},[pedidos])
+  }, [pedidos])
+  
+  const agregarLineaProducto = () => {
+    setLineasProducto([...lineasProducto, null]);
+  };
+
+  const eliminarLineaProducto = (index) => {
+    if (lineasProducto.length > 1) {
+      setLineasProducto(lineasProducto.filter((_, i) => i !== index));
+    } else {
+      const nuevasLineasProducto = [...lineasProducto];
+      nuevasLineasProducto[index] = null;
+      setLineasProducto(nuevasLineasProducto);
+    }
+  };
+
+  const actualizarLineaProducto = (index, producto) => {
+    const nuevasLineasProducto = [...lineasProducto];
+    nuevasLineasProducto[index] = producto;
+    setLineasProducto(nuevasLineasProducto);
+  };
   
   return (
     <>
@@ -46,7 +72,22 @@ function ProveedorPerfil() {
           <CabeceraComprobante nro={nro} local={local} venta={""} textoTipo={"N° Pedido: "} />
           <div className='hidden md:flex md:flex-col md:bg-negro-2 md:h-4/6 md:rounded-b-lg md:border md:border-negro-2 '>{/*Contenido - Grilla*/}
           <CabeceraProducto/>
-          <LineaProducto/>
+          <div className='w-full overflow-y-auto'>
+              {lineasProducto.map((producto, index) => (
+                <LineaProducto
+                  key={index}
+                  index={index}
+                  producto={producto}
+                  onEliminar={eliminarLineaProducto}
+                  onActualizar={actualizarLineaProducto}
+                />
+              ))}
+            </div>
+            <div className='w-full flex flex-row justify-center mt-2'>
+              <button onClick={agregarLineaProducto} className="p-2 bg-transparent text-color-4 text-2xl">
+                <FontAwesomeIcon icon="fa-solid fa-plus" />
+              </button>
+            </div>
             </div>
           <div className='flex w-full h-1/6 justify-between p-3'>
           { /*<BotonesFormaPago/>*/}

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Locales_bd from '../../bbdd/locales.json';
 import { useParams } from 'react-router-dom';
 
-function LineaProducto({ index, producto, onEliminar, onActualizar }) {
+function LineaProducto({ index, producto, onEliminar, onActualizar}) {
   const { id } = useParams();
   const [local] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
   const [productos] = useState(local.productos);
