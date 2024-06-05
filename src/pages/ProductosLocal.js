@@ -15,7 +15,7 @@ function ProductosLocal() {
   const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
   const [locales, setLocales] = useState(Locales_bd.locales);
   const [productos, setProductos] = useState(local.productos)
-  const [titulo, setTitulo] = useState('Agregar Usuario');
+  const [titulo, setTitulo] = useState('Agregar Producto');
   const [editar, setEditar] = useState(false);
   const [productoeditar,setProductoEditar] = useState({})
   const [nombre, setNombre] = useState('');
