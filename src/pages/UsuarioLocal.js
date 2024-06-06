@@ -12,6 +12,7 @@ function UsuarioLocal() {
   const [local, setLocal] = useState(Locales_bd.locales.find(l => l.id === parseInt(id)));
   const [usuarios, setUsuarios] = useState(Usuarios_bd.usuarios.filter(usuario => usuario.locales.some(local => local.id === parseInt(id))));
   const cargarUsuario = "";
+  const [esUsuarioLocal, setEsUsuarioLocal] = useState(true);
 
   return (
     <>
@@ -27,7 +28,7 @@ function UsuarioLocal() {
   </div>
   <div className=' flex-1 overflow-y-scroll p-2'>
     {usuarios.map(usuario => {
-      return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} />
+      return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} esUsuarioLocal={esUsuarioLocal} />
     })}
   </div>
       </div>

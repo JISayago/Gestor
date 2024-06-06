@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Usuarios() {
   const { usuarioCntxt } = useUser();
+  const [esUsuarioLocal, setEsUsuarioLocal] = useState(false);
   const navigate = useNavigate();
   const [locales, setLocales] = useState(Locales_bd.locales);
   const [usuarios, setUsuarios] = useState(Usuarios_bd.usuarios)
@@ -80,7 +81,7 @@ function Usuarios() {
         </div>
         <div className=' flex-1 overflow-y-auto p-2'>
           {usuarios.map(usuario => {
-            return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} />
+            return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} esUsuarioLocal={esUsuarioLocal} />
           })}
         </div>
     </div>
