@@ -6,21 +6,22 @@ import { useUser } from '../context/UsuarioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Navbar() {
-
-    const { usuarioCntxt, setUsuarioCntxt,animalPerfil } = useUser();
+  const { usuarioCntxt, setUsuarioCntxt,animalPerfil } = useUser();
+  const [localLogeado, setLocalLogeado] = useState(usuarioCntxt.logeado);
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [seguro, setSeguro] = useState(false);
     const navigate = useNavigate();
 
-    useEffect(() => {
+  useEffect(() => {
+      
         if (seguro) {
             // Si seguro se establece en true, entonces realiza las acciones de cierre de sesión
             setUsuarioCntxt(null);
             localStorage.removeItem('usuarioCntxt');
             navigate('/login');
-      }
-            
-    }, [seguro]); // Se ejecutará cada vez que seguro cambie
+       }
+            setLocalLogeado(usuarioCntxt.logeado)
+    }, [seguro,usuarioCntxt]); // Se ejecutará cada vez que seguro cambie
 
     const pregSeguro = () => {
         const confirmacion = window.confirm('¿Cerrar Sesión?');
@@ -31,12 +32,20 @@ function Navbar() {
     <div className='flex flex-col p-2 md:flex-row justify-between items-center w-full md:p-5 bg-negro-1 border-b border-b-blanco'>
       <div className='w-full justify-center items-center md:w-32'>
         <div className='w-auto flex justify-center md:w-32'>
+          <Link to='/'>
           <img className='w-2/5 rounded-full md:w-32' src={Logo} alt="Logo" />
+          </Link>
         </div>
       </div>
       <div className='flex justify-center items-end w-full'>
         <ol className='text-xl text-center text-white flex flex-col w-full h-full md:flex-row md:justify-evenly md:items-end md:h-full md:w-2/3 p-4'>
-          <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '><Link to='/'>Inicio</Link></li>
+          <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '>
+            {
+              localLogeado === 0 ?
+                <Link to='/'>Local</Link> :
+                <Link to={`/local/${localLogeado}`}>Local</Link> 
+            }   
+          </li>
           <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '><Link to='/proveedores'>Proveedores</Link></li>
           <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '><Link to='/productos'>Stock</Link></li>
           <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '><Link to='/ventas'>Ventas</Link></li>

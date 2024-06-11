@@ -10,7 +10,9 @@ const UsuarioContext = createContext();
 
 // Proveedor del contexto
 export const UsuarioProvider = ({ children }) => {
-  const [usuarioCntxt, setUsuarioCntxt] = useState(null); // Estado para almacenar el usuario logeado
+  const [usuarioCntxt, setUsuarioCntxt] = useState({
+    logeado: 0 // Inicializar logeado
+  });
   const [animalPerfil, setAnimalPerfil] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Estado para manejar la carga inicial
   const [isAdmin, setIsAdmin] = useState(false);
@@ -57,8 +59,16 @@ export const UsuarioProvider = ({ children }) => {
     setIsLoading(false); // Asegúrate de que isLoading se actualice correctamente aquí también
   }, [usuarioCntxt]);
 
+  // Función para actualizar la propiedad logeado
+  const setLogeado = (valor) => {
+    setUsuarioCntxt((prev) => ({
+      ...prev,
+      logeado: valor
+    }));
+  };
+
   return (
-    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isLoading, isAdmin, setIsAdmin }}>
+    <UsuarioContext.Provider value={{ usuarioCntxt, setUsuarioCntxt, animalPerfil, setAnimalPerfil, isLoading, isAdmin, setIsAdmin, setLogeado }}>
       {children}
     </UsuarioContext.Provider>
   );

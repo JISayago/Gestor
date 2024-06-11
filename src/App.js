@@ -22,6 +22,7 @@ import Pedidos from "./pages/Pedidos.js";
 import Autenticacion from "./components/Autenticacion.jsx";
 import './index.css'; // Asegúrate de importar los estilos aquí
 import AutenticacionRol from "./components/AutenticacionRol.jsx";
+import LocalAgregar from "./pages/LocalAgregar.js";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
     <Route path="/" element={<Autenticacion><Locales /></Autenticacion>}/>
     <Route path="/login" element={<Login />} /> 
     <Route path="/local/:id" element={<Autenticacion><Local /></Autenticacion>}/>
-    <Route path="//local/:id/ventas" element={<Autenticacion><VentasLocal /></Autenticacion>}/>
+    <Route path="/local/:id/ventas" element={<Autenticacion><VentasLocal /></Autenticacion>}/>
     <Route path="/local/:id/usuarios" element={<Autenticacion><UsuarioLocal /></Autenticacion>}/>
     <Route path="/local/:id/proveedores" element={<Autenticacion><ListadoProveedores /></Autenticacion>}/>
     <Route path="/local/:id/productos" element={<Autenticacion><ProductosLocal /></Autenticacion>}/>
@@ -44,6 +45,7 @@ function App() {
     <Route path="/proveedores" element={<Autenticacion><AutenticacionRol><Proveedores /></AutenticacionRol></Autenticacion>}/>
     <Route path="/pedidos" element={<Autenticacion><AutenticacionRol><Pedidos /></AutenticacionRol></Autenticacion>}/>
     <Route path="/ventas" element={<Autenticacion><AutenticacionRol><Ventas /></AutenticacionRol></Autenticacion>} />
+    <Route path="/local" element={<Autenticacion><AutenticacionRol><LocalAgregar /></AutenticacionRol></Autenticacion>} />
     
     <Route path="/limitado" element={<Error403 />} />{/*pagina restringidda error 403 forbiden access */}
     <Route path="*" element={<Error404 />} />{/*pagina no encontrada error 404 pagina no encontrada*/}
