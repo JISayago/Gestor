@@ -17,7 +17,6 @@ function LineaUsuario({ usuario, cargarUsuario, esUsuarioLocal }) {
           ?
           <div className='flex justify-center border border-negro-2 h-full py-2 px-5 w-1/12 items-center'><button onClick={() => cargarUsuario(usuario)}><FontAwesomeIcon className='text-negro-1 hover:text-color-5' icon="fa-solid fa-user" /></button></div>
           :
-          
           <div className='flex justify-evenly border border-negro-2 h-full py-2 px-5 w-1/12 items-center'>
             <button onClick={() => cargarUsuario(usuario)}><FontAwesomeIcon className='text-negro-1 hover:text-color-4' icon="fa-solid fa-pen" /></button>
             <button onClick={() => cargarUsuario(usuario)}><FontAwesomeIcon className='text-negro-1 hover:text-color-5' icon="fa-solid fa-user" /></button>
