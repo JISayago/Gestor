@@ -6,7 +6,7 @@ function ListadoLocales({locales}) {
     <div className='flex flex-wrap justify-center w-full bg-negro-2 md:p-5'>
       {
         locales.map(local => 
-          <ItemLocal local={local} />
+          <ItemLocal local={local} esNuevo={false}/>
           )}
     </div>
   )
