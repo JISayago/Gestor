@@ -51,8 +51,8 @@ function LocalForm() {
               <div className='w-full mb-2 h-56 relative border-2 rounded-lg border-color-1'>
                 <img
                   src={imageSrc || 'https://via.placeholder.com/150'}
-                  alt='Imagen por defecto'
-                  className='w-full h-56 rounded-lg object-cover p-1'
+                  alt='Cargar imagen'
+                  className='w-full h-56 rounded-lg object-cover p-1 text-blanco'
                 />
                 <input
                   type='file'
