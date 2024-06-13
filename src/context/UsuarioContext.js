@@ -10,9 +10,7 @@ const UsuarioContext = createContext();
 
 // Proveedor del contexto
 export const UsuarioProvider = ({ children }) => {
-  const [usuarioCntxt, setUsuarioCntxt] = useState({
-    logeado: 0 // Inicializar logeado
-  });
+  const [usuarioCntxt, setUsuarioCntxt] = useState(null);
   const [animalPerfil, setAnimalPerfil] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Estado para manejar la carga inicial
   const [isAdmin, setIsAdmin] = useState(false);
