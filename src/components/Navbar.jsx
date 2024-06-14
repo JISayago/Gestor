@@ -33,7 +33,7 @@ function Navbar() {
       <div className='w-full justify-center items-center md:w-32'>
         <div className='w-auto flex justify-center md:w-32'>
           <Link to='/'>
-          <img className='w-2/5 rounded-full md:w-32' src={Logo} alt="Logo" />
+          <img className='w-2/5 rounded-full md:w-32' src={IconoPerfil} alt="Logo" />
           </Link>
         </div>
       </div>

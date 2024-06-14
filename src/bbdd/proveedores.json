@@ -1,220 +1,358 @@
 {
-    "proveedores": [
+  "proveedores": [
+    {
+      "id": 1,
+      "nombre": "Distribuidora Sportiva",
+      "razonSocial": "Distribuidora Sportiva S.A.",
+      "cuit": "1234567890",
+      "cuentaCorriente": "123-456789/0",
+      "email": "contacto@distribuidorasportiva.com",
+      "rubro": "Ropa Deportiva",
+      "locales": [
         {
           "id": 1,
-          "nombre": "Proveedor A",
-          "razonSocial": "Razón Social A",
-          "cuit": "1234567890",
-          "cuentaCorriente": "123-456789/0",
-          "email": "proveedora@example.com",
-          "rubro": "Rubro A",
-          "locales": [
+          "nombre": "Local Central",
+          "productos": [
             {
-              "id": 1,
-              "nombre": "Local Central",
-              "productos": [
-                {
-                  "nombre": "Producto 1",
-                  "precio": 500,
-                  "stock": 100,
-                  "categoria": "Categoría 1",
-                  "talle": "M",
-                  "color": "Rojo",
-                  "codigo": 10001
-                },
-                {
-                  "nombre": "Producto 2",
-                  "precio": 750,
-                  "stock": 50,
-                  "categoria": "Categoría 2",
-                  "talle": "L",
-                  "color": "Azul",
-                  "codigo": 10002
-                }
-              ]
+              "nombre": "Remera Adidas",
+              "precio": 12000,
+              "stock": 100,
+              "categoria": "Remeras Hombre",
+              "talle": "M",
+              "color": "Rojo",
+              "codigo": 10001
             },
             {
-              "id": 2,
-              "nombre": "Sucursal Norte",
-              "productos": [
-                {
-                  "nombre": "Producto 3",
-                  "precio": 600,
-                  "stock": 80,
-                  "categoria": "Categoría 1",
-                  "talle": "S",
-                  "color": "Verde",
-                  "codigo": 10003
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "nombre": "Proveedor B",
-          "razonSocial": "Razón Social B",
-          "cuit": "0987654321",
-          "cuentaCorriente": "098-765432/1",
-          "email": "proveedorb@example.com",
-          "rubro": "Rubro B",
-          "locales": [
+              "nombre": "Camiseta Nike",
+              "precio": 15000,
+              "stock": 50,
+              "categoria": "Camisetas Hombre",
+              "talle": "L",
+              "color": "Azul",
+              "codigo": 10002
+            },
             {
-              "id": 3,
-              "nombre": "Sucursal Sur",
-              "productos": [
-                {
-                  "nombre": "Producto 4",
-                  "precio": 700,
-                  "stock": 60,
-                  "categoria": "Categoría 2",
-                  "talle": "XL",
-                  "color": "Amarillo",
-                  "codigo": 10004
-                },
-                {
-                  "nombre": "Producto 1",
-                  "precio": 500,
-                  "stock": 100,
-                  "categoria": "Categoría 1",
-                  "talle": "M",
-                  "color": "Rojo",
-                  "codigo": 10001
-                }
-              ]
+              "nombre": "Remera Nike",
+              "precio": 13000,
+              "stock": 110,
+              "categoria": "Remeras Mujer",
+              "talle": "L",
+              "color": "Rosa",
+              "codigo": 10008
+            },
+            {
+              "nombre": "Buzo Under Armour",
+              "precio": 20000,
+              "stock": 50,
+              "categoria": "Buzos Hombre",
+              "talle": "S",
+              "color": "Rojo",
+              "codigo": 10011
             }
           ]
         },
         {
           "id": 3,
-          "nombre": "Proveedor C",
-          "razonSocial": "Razón Social C",
-          "cuit": "1357924680",
-          "cuentaCorriente": "135-792468/0",
-          "email": "proveedorc@example.com",
-          "rubro": "Rubro C",
-          "locales": [
+          "nombre": "Sucursal Sur",
+          "productos": [
             {
-              "id": 4,
-              "nombre": "Sucursal Este",
-              "productos": [
-                {
-                  "nombre": "Producto 5",
-                  "precio": 550,
-                  "stock": 90,
-                  "categoria": "Categoría 1",
-                  "talle": "M",
-                  "color": "Gris",
-                  "codigo": 10005
-                },
-                {
-                  "nombre": "Producto 3",
-                  "precio": 600,
-                  "stock": 80,
-                  "categoria": "Categoría 1",
-                  "talle": "S",
-                  "color": "Verde",
-                  "codigo": 10003
-                }
-              ]
+              "nombre": "Camiseta Nike",
+              "precio": 15000,
+              "stock": 50,
+              "categoria": "Camisetas Hombre",
+              "talle": "L",
+              "color": "Azul",
+              "codigo": 10002
+            },
+            {
+              "nombre": "Remera Nike",
+              "precio": 13000,
+              "stock": 110,
+              "categoria": "Remeras Mujer",
+              "talle": "L",
+              "color": "Rosa",
+              "codigo": 10008
+            },
+            {
+              "nombre": "Buzo Under Armour",
+              "precio": 20000,
+              "stock": 50,
+              "categoria": "Buzos Hombre",
+              "talle": "S",
+              "color": "Rojo",
+              "codigo": 10011
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Textiles Andina",
+      "razonSocial": "Textiles Andina S.A.",
+      "cuit": "0987654321",
+      "cuentaCorriente": "098-765432/1",
+      "email": "ventas@textilesandina.com",
+      "rubro": "Textiles",
+      "locales": [
+        {
+          "id": 2,
+          "nombre": "Sucursal Norte",
+          "productos": [
+            {
+              "nombre": "Campera Puma",
+              "precio": 25000,
+              "stock": 80,
+              "categoria": "Camperas Mujer",
+              "talle": "S",
+              "color": "Verde",
+              "codigo": 10003
+            },
+            {
+              "nombre": "Medias Adidas",
+              "precio": 9000,
+              "stock": 10,
+              "categoria": "Medias Niño",
+              "talle": "S",
+              "color": "Gris",
+              "codigo": 10007
+            },
+            {
+              "nombre": "Campera Reebok",
+              "precio": 26000,
+              "stock": 90,
+              "categoria": "Camperas Niño",
+              "talle": "XL",
+              "color": "Azul",
+              "codigo": 10010
             }
           ]
         },
         {
           "id": 4,
-          "nombre": "Proveedor D",
-          "razonSocial": "Razón Social D",
-          "cuit": "2468135790",
-          "cuentaCorriente": "246-813579/0",
-          "email": "proveedord@example.com",
-          "rubro": "Rubro D",
-          "locales": [
+          "nombre": "Sucursal Este",
+          "productos": [
             {
-              "id": 5,
-              "nombre": "Sucursal Oeste",
-              "productos": [
-                {
-                  "nombre": "Producto 6",
-                  "precio": 620,
-                  "stock": 70,
-                  "categoria": "Categoría 1",
-                  "talle": "L",
-                  "color": "Azul Marino",
-                  "codigo": 10006
-                },
-                {
-                  "nombre": "Producto 7",
-                  "precio": 830,
-                  "stock": 40,
-                  "categoria": "Categoría 2",
-                  "talle": "XL",
-                  "color": "Negro",
-                  "codigo": 10007
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "nombre": "Proveedor E",
-          "razonSocial": "Razón Social E",
-          "cuit": "3692581470",
-          "cuentaCorriente": "369-258147/0",
-          "email": "proveedore@example.com",
-          "rubro": "Rubro E",
-          "locales": [
-            {
-              "id": 6,
-              "nombre": "Sucursal Centro",
-              "productos": [
-                {
-                  "nombre": "Producto 8",
-                  "precio": 660,
-                  "stock": 75,
-                  "categoria": "Categoría 1",
-                  "talle": "M",
-                  "color": "Rojo",
-                  "codigo": 10008
-                },
-                {
-                  "nombre": "Producto 9",
-                  "precio": 880,
-                  "stock": 35,
-                  "categoria": "Categoría 2",
-                  "talle": "XL",
-                  "color": "Negro",
-                  "codigo": 10009
-                }
-              ]
+              "nombre": "Camiseta Puma",
+              "precio": 14000,
+              "stock": 70,
+              "categoria": "Camisetas Niño",
+              "talle": "M",
+              "color": "Verde",
+              "codigo": 10009
             }
           ]
         },
         {
           "id": 6,
-          "nombre": "Proveedor F",
-          "razonSocial": "Razón Social F",
-          "cuit": "6874567890",
-          "cuentaCorriente": "321-444489/0",
-          "email": "proveedorf@example.com",
-          "rubro": "Rubro F",
-          "locales": [
+          "nombre": "Sucursal Centro",
+          "productos": [
             {
-              "id": 7,
-              "nombre": "Sucursal Oeste",
-              "productos": [
-                {
-                  "nombre": "Producto 10",
-                  "precio": 720,
-                  "stock": 55,
-                  "categoria": "Categoría 1",
-                  "talle": "S",
-                  "color": "Verde",
-                  "codigo": 10010
-                }
-              ]
+              "nombre": "Medias Adidas",
+              "precio": 9000,
+              "stock": 10,
+              "categoria": "Medias Niño",
+              "talle": "S",
+              "color": "Gris",
+              "codigo": 10007
+            },
+            {
+              "nombre": "Campera Reebok",
+              "precio": 26000,
+              "stock": 90,
+              "categoria": "Camperas Niño",
+              "talle": "XL",
+              "color": "Azul",
+              "codigo": 10010
+            },
+            {
+              "nombre": "Medias Puma",
+              "precio": 10000,
+              "stock": 20,
+              "categoria": "Medias Mujer",
+              "talle": "M",
+              "color": "Gris",
+              "codigo": 10014
             }
           ]
         }
       ]
+    },
+    {
+      "id": 3,
+      "nombre": "Comercial Deportiva",
+      "razonSocial": "Comercial Deportiva S.A.",
+      "cuit": "1357924680",
+      "cuentaCorriente": "135-792468/0",
+      "email": "info@comercialdeportiva.com",
+      "rubro": "Comercio",
+      "locales": [
+        {
+          "id": 6,
+          "nombre": "Sucursal Centro",
+          "productos": [
+            {
+              "nombre": "Buzo Reebok",
+              "precio": 18000,
+              "stock": 60,
+              "categoria": "Buzos Mujer",
+              "talle": "XL",
+              "color": "Amarillo",
+              "codigo": 10004
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nombre": "Sucursal Este",
+          "productos": [
+            {
+              "nombre": "Buzo Reebok",
+              "precio": 18000,
+              "stock": 60,
+              "categoria": "Buzos Mujer",
+              "talle": "XL",
+              "color": "Amarillo",
+              "codigo": 10004
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Distribuciones Urbanas",
+      "razonSocial": "Distribuciones Urbanas S.A.",
+      "cuit": "2468135790",
+      "cuentaCorriente": "246-813579/0",
+      "email": "contacto@distribucionesurbanas.com",
+      "rubro": "Distribución",
+      "locales": [
+        {
+          "id": 5,
+          "nombre": "Sucursal Oeste",
+          "productos": [
+            {
+              "nombre": "Camperón Under Armour",
+              "precio": 35000,
+              "stock": 40,
+              "categoria": "Camperones Hombre",
+              "talle": "XS",
+              "color": "Negro",
+              "codigo": 10005
+            },
+            {
+              "nombre": "Camperón Asics",
+              "precio": 34000,
+              "stock": 30,
+              "categoria": "Camperones Mujer",
+              "talle": "M",
+              "color": "Negro",
+              "codigo": 10012
+            },
+            {
+              "nombre": "Pantalón Nike",
+              "precio": 23000,
+              "stock": 40,
+              "categoria": "Pantalones Mujer",
+              "talle": "XS",
+              "color": "Blanco",
+              "codigo": 10013
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "nombre": "Local Central",
+          "productos": [
+            {
+              "nombre": "Camperón Under Armour",
+              "precio": 35000,
+              "stock": 40,
+              "categoria": "Camperones Hombre",
+              "talle": "XS",
+              "color": "Negro",
+              "codigo": 10005
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Textil Mundial",
+      "razonSocial": "Textil Mundial S.A.",
+      "cuit": "3692581470",
+      "cuentaCorriente": "369-258147/0",
+      "email": "ventas@textilmundial.com",
+      "rubro": "Textiles",
+      "locales": [
+        {
+          "id": 5,
+          "nombre": "Sucursal Oeste",
+          "productos": [
+            {
+              "nombre": "Pantalón Asics",
+              "precio": 22000,
+              "stock": 20,
+              "categoria": "Pantalones Niño",
+              "talle": "XXL",
+              "color": "Blanco",
+              "codigo": 10006
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nombre": "Sucursal Este",
+          "productos": [
+            {
+              "nombre": "Pantalón Asics",
+              "precio": 22000,
+              "stock": 20,
+              "categoria": "Pantalones Niño",
+              "talle": "XXL",
+              "color": "Blanco",
+              "codigo": 10006
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Proveedor Integral",
+      "razonSocial": "Proveedor Integral S.R.L.",
+      "cuit": "6874567890",
+      "cuentaCorriente": "321-444489/0",
+      "email": "info@proveedorintegral.com",
+      "rubro": "Varios",
+      "locales": [
+        {
+          "id": 6,
+          "nombre": "Sucursal Centro",
+          "productos": [
+            {
+              "nombre": "Pantalón Nike",
+              "precio": 23000,
+              "stock": 40,
+              "categoria": "Pantalones Mujer",
+              "talle": "XS",
+              "color": "Blanco",
+              "codigo": 10013
+            },
+            {
+              "nombre": "Medias Puma",
+              "precio": 10000,
+              "stock": 20,
+              "categoria": "Medias Mujer",
+              "talle": "M",
+              "color": "Gris",
+              "codigo": 10014
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

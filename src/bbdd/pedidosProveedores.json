@@ -1,109 +1,104 @@
 {
-    
-    "pedidosProveedores": [
+  "pedidosProveedores": [
+    {
+      "id": 1,
+      "numeroReferencia": "0001/1",
+      "proveedor": {
+        "id": 1,
+        "nombre": "Nike",
+        "razonSocial": "Nike S.A.",
+        "cuit": "1234567890",
+        "cuentaCorriente": "123-456789/0",
+        "email": "nike@example.com",
+        "rubro": "Deportes"
+      },
+      "local": {
+        "id": 1,
+        "nombre": "Local Central",
+        "direccion": "Avenida Siempreviva 123, Buenos Aires"
+      },
+      "productos": [
         {
-          "id": 1,
-          "numeroReferencia": "0001/1",
-          "proveedor": {
-            "id": 1,
-            "nombre": "Proveedor A",
-            "razonSocial": "Razón Social A",
-            "cuit": "1234567890",
-            "cuentaCorriente": "123-456789/0",
-            "email": "proveedora@example.com",
-            "rubro": "Rubro A"
-          },
-          "local": {
-            "id": 1,
-            "nombre": "Local Central",
-            "direccion": "Avenida Siempreviva 123, Buenos Aires",
-            "imagen": "http://example.com/images/local_central.jpg"
-          },
-          "productos": [
-            {
-              "nombre": "Producto 1",
-              "precio": 500,
-              "cantidad": 2,
-              "talle": "M",
-              "color": "Rojo",
-              "codigo": 10001
-            },
-            {
-              "nombre": "Producto 2",
-              "precio": 750,
-              "cantidad": 1,
-              "talle": "L",
-              "color": "Azul",
-              "codigo": 10002
-            }
-          ],
-          "total": 1750,
-          "fechaPedido": "2024-05-01",
-          "fechaPagado": "2024-05-02",
-          "fechaRecibida": "2024-05-05",
-          "usuario": {
-            "nombre": "Carlos",
-            "apellido": "Gonzalez",
-            "telefono": "+5491162345678",
-            "dni": "12345678",
-            "email": "carlos.gonzalez@example.com",
-            "nombreUsuario": "cgonzalez",
-            "contrasena": "tigre",
-            "rol": "admin",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZ29uemFsZXoiLCJyb2wiOiJhZG1pbiIsImlhdCI6MTY3MTIzNDU2M30.9SfUdfEAPDZ5M7L9E6ECm56wRJQl7P3cR5n9qxkJE9c",
-            "imagen": "http://example.com/images/carlos_gonzalez.jpg"
-          },
-          "estadoEncargado": false,
-          "estadoPagado": true,
-          "estadoRecibido": true
+          "nombre": "Remera Adidas",
+          "precio": 12000,
+          "cantidad": 2,
+          "talle": "M",
+          "color": "Rojo",
+          "codigo": 10001
         },
         {
-          "id": 2,
-          "numeroReferencia": "0002/1",
-          "proveedor": {
-            "id": 1,
-            "nombre": "Proveedor A",
-            "razonSocial": "Razón Social A",
-            "cuit": "1234567890",
-            "cuentaCorriente": "123-456789/0",
-            "email": "proveedora@example.com",
-            "rubro": "Rubro A"
-          },
-          "local": {
-            "id": 1,
-            "nombre": "Local Central",
-            "direccion": "Avenida Siempreviva 123, Buenos Aires",
-            "imagen": "http://example.com/images/local_central.jpg"
-          },
-          "productos": [
-            {
-              "nombre": "Producto 3",
-              "precio": 600,
-              "cantidad": 1,
-              "talle": "S",
-              "color": "Verde",
-              "codigo": 10003
-            }
-          ],
-          "total": 600,
-          "fechaPedido": "2024-05-05",
-          "fechaPagado": null,
-          "fechaRecibida": null,
-          "usuario": {
-            "nombre": "Laura",
-            "apellido": "Martinez",
-            "telefono": "+5491187654321",
-            "dni": "56789012",
-            "email": "laura.martinez@example.com",
-            "nombreUsuario": "lmartinez",
-            "contrasena": "tigresa",
-            "rol": "admin",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsbWFydGV6Iiwicm9sIjoiYWRtaW4iLCJpYXQiOjE2NzEyMzQ1Njd9.vzLBBqXsfplSQmwLLHlo5VHz3NmC-R7K1-0tFrn7n1s",
-            "imagen": "http://example.com/images/laura_martinez.jpg"
-          },
-          "estadoEncargado": false,
-          "estadoPagado": false,
-          "estadoRecibido": false
+          "nombre": "Camiseta Nike",
+          "precio": 15000,
+          "cantidad": 1,
+          "talle": "L",
+          "color": "Azul",
+          "codigo": 10002
         }
-      ]
+      ],
+      "total": 39000,
+      "fechaPedido": "2024-05-01",
+      "fechaPagado": "2024-05-02",
+      "fechaRecibida": "2024-05-05",
+      "usuario": {
+        "nombre": "Carlos",
+        "apellido": "Gonzalez",
+        "telefono": "+5491162345678",
+        "dni": "12345678",
+        "email": "carlos.gonzalez@example.com",
+        "nombreUsuario": "cgonzalez",
+        "contrasena": "tigre",
+        "rol": "admin",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZ29uemFsZXoiLCJyb2wiOiJhZG1pbiIsImlhdCI6MTY3MTIzNDU2M30.9SfUdfEAPDZ5M7L9E6ECm56wRJQl7P3cR5n9qxkJE9c"
+      },
+      "estadoEncargado": false,
+      "estadoPagado": true,
+      "estadoRecibido": true
+    },
+    {
+      "id": 2,
+      "numeroReferencia": "0002/1",
+      "proveedor": {
+        "id": 2,
+        "nombre": "Puma",
+        "razonSocial": "Puma S.A.",
+        "cuit": "2345678901",
+        "cuentaCorriente": "234-567890/1",
+        "email": "puma@example.com",
+        "rubro": "Ropa"
+      },
+      "local": {
+        "id": 1,
+        "nombre": "Local Central",
+        "direccion": "Avenida Siempreviva 123, Buenos Aires"
+      },
+      "productos": [
+        {
+          "nombre": "Campera Puma",
+          "precio": 25000,
+          "cantidad": 1,
+          "talle": "S",
+          "color": "Verde",
+          "codigo": 10003
+        }
+      ],
+      "total": 25000,
+      "fechaPedido": "2024-05-05",
+      "fechaPagado": null,
+      "fechaRecibida": null,
+      "usuario": {
+        "nombre": "Laura",
+        "apellido": "Martinez",
+        "telefono": "+5491187654321",
+        "dni": "56789012",
+        "email": "laura.martinez@example.com",
+        "nombreUsuario": "lmartinez",
+        "contrasena": "tigresa",
+        "rol": "admin",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsbWFydGV6Iiwicm9sIjoiYWRtaW4iLCJpYXQiOjE2NzEyMzQ1Njd9.vzLBBqXsfplSQmwLLHlo5VHz3NmC-R7K1-0tFrn7n1s"
+      },
+      "estadoEncargado": false,
+      "estadoPagado": false,
+      "estadoRecibido": false
+    }
+  ]
 }
