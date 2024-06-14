@@ -1,8 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Data from '../../bbdd/locales.json'
 
 function LocalForm() {
   const [imageSrc, setImageSrc] = useState(null);
+  const [locales, setLocales] = useState(Data.locales);
+  const [numeroLocal, setNumeroLocal] = useState(0);
+
+  useEffect(() => {
+    setNumeroLocal(locales.length + 1);
+  },locales)
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -23,8 +30,9 @@ function LocalForm() {
             <div className='flex flex-col items-center w-1/3'>
               <input
                 className='m-2 w-full p-2 bg-white text-black placeholder:text-stone-600 rounded-lg'
-                type='text'
-                placeholder='Numero...'
+                type='number'
+                value={numeroLocal}
+                disabled
               />
               <input
                 className='m-2 w-full p-2 bg-white text-black placeholder:text-stone-600 rounded-lg'
@@ -51,8 +59,8 @@ function LocalForm() {
               <div className='w-full mb-2 h-56 relative border-2 rounded-lg border-color-1'>
                 <img
                   src={imageSrc || 'https://via.placeholder.com/150'}
-                  alt='Imagen por defecto'
-                  className='w-full h-56 rounded-lg object-cover p-1'
+                  alt='Cargar imagen'
+                  className='w-full h-56 rounded-lg object-cover p-1 text-blanco'
                 />
                 <input
                   type='file'

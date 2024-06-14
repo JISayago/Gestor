@@ -1,5 +1,10 @@
 import React from 'react'
 import LogoLocal from '../../assets/LogoLocal.png'
+
+import LogoLocal2 from '../../assets/localesImg/faster.jpg'
+import LogoLocal3 from '../../assets/localesImg/man.jpg'
+import LogoLocal4 from '../../assets/localesImg/valky.jpg'
+
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useUser } from '../../context/UsuarioContext';
@@ -13,6 +18,7 @@ function ItemLocal({ local,esNuevo }) {
     setLogeado(local.id)
     navigate(`/local/${local.id}`)
   }
+  console.log('item',local.imagen)
   
   return (
     
@@ -20,7 +26,7 @@ function ItemLocal({ local,esNuevo }) {
       <div className='flex w-full h-3/5 m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         
         <div className='w-1/2 h-full'>
-          <img className='rounded-md' src={LogoLocal} />
+        <img className='rounded-md w-48 h-48 mt-5' src={local.imagen} />
         </div>
         
         <div className='flex flex-col w-1/2 h-full justify-around items-center'>
@@ -35,7 +41,7 @@ function ItemLocal({ local,esNuevo }) {
     :
       <div className='flex w-full h-3/5 m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         <div className='w-1/2 h-full'>
-          <img className='rounded-md' src={LogoLocal} />
+          <img className='rounded-md w-48 h-48' src={local.imagen} />
         </div>
         <div className='flex flex-col w-1/2 h-full justify-around'>
           <div className='w-full flex justify-center  p-3 '>

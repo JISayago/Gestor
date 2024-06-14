@@ -1,120 +1,242 @@
 {
-  
-  
- 
-  
-        "productos": [
-          {
-            "nombre": "Producto 1",
-            "precio": 500,
-            "stock": 100,
-            "categoria": "Categoría 1",
-            "talle": "M",
-            "color": "Rojo",
-            "codigo": 10001,
-            "locales": [
-              {"nombre": "Local Central", "id": 1}
-            ],
-            "proveedor": {
-              "id": 1,
-              "nombre": "Proveedor A"
-            }
-          },
-          {
-            "nombre": "Producto 2",
-            "precio": 750,
-            "stock": 50,
-            "categoria": "Categoría 2",
-            "talle": "L",
-            "color": "Azul",
-            "codigo": 10002,
-            "locales": [
-              {"nombre": "Local Central", "id": 1}
-            ],
-            "proveedor": {
-              "id": 1,
-              "nombre": "Proveedor A"
-            }
-          },
-          {
-            "nombre": "Producto 3",
-            "precio": 600,
-            "stock": 80,
-            "categoria": "Categoría 1",
-            "talle": "S",
-            "color": "Verde",
-            "codigo": 10003,
-            "locales": [
-              {"nombre": "Sucursal Norte", "id": 2}
-            ],
-            "proveedor": {
-              "id": 2,
-              "nombre": "Proveedor B"
-            }
-          },
-          {
-            "nombre": "Producto 4",
-            "precio": 700,
-            "stock": 60,
-            "categoria": "Categoría 2",
-            "talle": "XL",
-            "color": "Amarillo",
-            "codigo": 10004,
-            "locales": [
-              {"nombre": "Sucursal Sur", "id": 3}
-            ],
-            "proveedor": {
-              "id": 3,
-              "nombre": "Proveedor C"
-            }
-          },
-          {
-            "nombre": "Producto 5",
-            "precio": 800,
-            "stock": 40,
-            "categoria": "Categoría 2",
-            "talle": "XS",
-            "color": "Negro",
-            "codigo": 10005,
-            "locales": [
-              {"nombre": "Sucursal Este", "id": 4}
-            ],
-            "proveedor": {
-              "id": 4,
-              "nombre": "Proveedor D"
-            }
-          },
-          {
-            "nombre": "Producto 6",
-            "precio": 900,
-            "stock": 20,
-            "categoria": "Categoría 2",
-            "talle": "XXL",
-            "color": "Blanco",
-            "codigo": 10006,
-            "locales": [
-              {"nombre": "Sucursal Oeste", "id": 5}
-            ],
-            "proveedor": {
-              "id": 5,
-              "nombre": "Proveedor E"
-            }
-          },
-          {
-            "nombre": "Producto 7",
-            "precio": 1000,
-            "stock": 10,
-            "categoria": "Categoría 3",
-            "talle": "S",
-            "color": "Gris",
-            "codigo": 10007,
-            "locales": [
-              {"nombre": "Sucursal Centro", "id": 6}
-            ],
-            "proveedor": {
-              "id": 6,
-              "nombre": "Proveedor F"
-            }
-          }
-        ]
+  "productos": [
+    {
+      "nombre": "Remera Adidas",
+      "precio": 12000,
+      "stock": 100,
+      "categoria": "Remeras Hombre",
+      "talle": "M",
+      "color": "Rojo",
+      "codigo": 10001,
+      "locales": [
+        {"nombre": "Local Central", "id": 1},
+        {"nombre": "Sucursal Norte", "id": 2}
+      ],
+      "proveedor": {
+        "id": 1,
+        "nombre": "Distribuidora Sportiva"
       }
+    },
+    {
+      "nombre": "Camiseta Nike",
+      "precio": 15000,
+      "stock": 50,
+      "categoria": "Camisetas Hombre",
+      "talle": "L",
+      "color": "Azul",
+      "codigo": 10002,
+      "locales": [
+        {"nombre": "Local Central", "id": 1},
+        {"nombre": "Sucursal Sur", "id": 3}
+      ],
+      "proveedor": {
+        "id": 1,
+        "nombre": "Distribuidora Sportiva"
+      }
+    },
+    {
+      "nombre": "Campera Puma",
+      "precio": 25000,
+      "stock": 80,
+      "categoria": "Camperas Mujer",
+      "talle": "S",
+      "color": "Verde",
+      "codigo": 10003,
+      "locales": [
+        {"nombre": "Sucursal Norte", "id": 2},
+        {"nombre": "Sucursal Centro", "id": 6}
+      ],
+      "proveedor": {
+        "id": 2,
+        "nombre": "Textiles Andina"
+      }
+    },
+    {
+      "nombre": "Buzo Reebok",
+      "precio": 18000,
+      "stock": 60,
+      "categoria": "Buzos Mujer",
+      "talle": "XL",
+      "color": "Amarillo",
+      "codigo": 10004,
+      "locales": [
+        {"nombre": "Sucursal Sur", "id": 3},
+        {"nombre": "Local Central", "id": 1}
+      ],
+      "proveedor": {
+        "id": 3,
+        "nombre": "Comercial Deportiva"
+      }
+    },
+    {
+      "nombre": "Camperón Under Armour",
+      "precio": 35000,
+      "stock": 40,
+      "categoria": "Camperones Hombre",
+      "talle": "XS",
+      "color": "Negro",
+      "codigo": 10005,
+      "locales": [
+        {"nombre": "Sucursal Este", "id": 4},
+        {"nombre": "Sucursal Oeste", "id": 5}
+      ],
+      "proveedor": {
+        "id": 4,
+        "nombre": "Distribuciones Urbanas"
+      }
+    },
+    {
+      "nombre": "Pantalón Asics",
+      "precio": 22000,
+      "stock": 20,
+      "categoria": "Pantalones Niño",
+      "talle": "XXL",
+      "color": "Blanco",
+      "codigo": 10006,
+      "locales": [
+        {"nombre": "Sucursal Oeste", "id": 5},
+        {"nombre": "Local Central", "id": 1}
+      ],
+      "proveedor": {
+        "id": 5,
+        "nombre": "Textil Mundial"
+      }
+    },
+    {
+      "nombre": "Medias Adidas",
+      "precio": 9000,
+      "stock": 10,
+      "categoria": "Medias Niño",
+      "talle": "S",
+      "color": "Gris",
+      "codigo": 10007,
+      "locales": [
+        {"nombre": "Sucursal Centro", "id": 6},
+        {"nombre": "Sucursal Norte", "id": 2}
+      ],
+      "proveedor": {
+        "id": 6,
+        "nombre": "Proveedor Integral"
+      }
+    },
+    {
+      "nombre": "Remera Nike",
+      "precio": 13000,
+      "stock": 110,
+      "categoria": "Remeras Mujer",
+      "talle": "L",
+      "color": "Rosa",
+      "codigo": 10008,
+      "locales": [
+        {"nombre": "Local Central", "id": 1},
+        {"nombre": "Sucursal Sur", "id": 3}
+      ],
+      "proveedor": {
+        "id": 1,
+        "nombre": "Distribuidora Sportiva"
+      }
+    },
+    {
+      "nombre": "Camiseta Puma",
+      "precio": 14000,
+      "stock": 70,
+      "categoria": "Camisetas Niño",
+      "talle": "M",
+      "color": "Verde",
+      "codigo": 10009,
+      "locales": [
+        {"nombre": "Sucursal Oeste", "id": 5},
+        {"nombre": "Sucursal Este", "id": 4}
+      ],
+      "proveedor": {
+        "id": 2,
+        "nombre": "Textiles Andina"
+      }
+    },
+    {
+      "nombre": "Campera Reebok",
+      "precio": 26000,
+      "stock": 90,
+      "categoria": "Camperas Niño",
+      "talle": "XL",
+      "color": "Azul",
+      "codigo": 10010,
+      "locales": [
+        {"nombre": "Sucursal Norte", "id": 2},
+        {"nombre": "Sucursal Centro", "id": 6}
+      ],
+      "proveedor": {
+        "id": 3,
+        "nombre": "Comercial Deportiva"
+      }
+    },
+    {
+      "nombre": "Buzo Under Armour",
+      "precio": 20000,
+      "stock": 50,
+      "categoria": "Buzos Hombre",
+      "talle": "S",
+      "color": "Rojo",
+      "codigo": 10011,
+      "locales": [
+        {"nombre": "Local Central", "id": 1},
+        {"nombre": "Sucursal Sur", "id": 3}
+      ],
+      "proveedor": {
+        "id": 4,
+        "nombre": "Distribuciones Urbanas"
+      }
+    },
+    {
+      "nombre": "Camperón Asics",
+      "precio": 34000,
+      "stock": 30,
+      "categoria": "Camperones Mujer",
+      "talle": "M",
+      "color": "Negro",
+      "codigo": 10012,
+      "locales": [
+        {"nombre": "Sucursal Este", "id": 4},
+        {"nombre": "Sucursal Oeste", "id": 5}
+      ],
+      "proveedor": {
+        "id": 5,
+        "nombre": "Textil Mundial"
+      }
+    },
+    {
+      "nombre": "Pantalón Nike",
+      "precio": 23000,
+      "stock": 40,
+      "categoria": "Pantalones Mujer",
+      "talle": "XS",
+      "color": "Blanco",
+      "codigo": 10013,
+      "locales": [
+        {"nombre": "Sucursal Oeste", "id": 5},
+        {"nombre": "Sucursal Centro", "id": 6}
+      ],
+      "proveedor": {
+        "id": 6,
+        "nombre": "Proveedor Integral"
+      }
+    },
+    {
+      "nombre": "Medias Puma",
+      "precio": 10000,
+      "stock": 20,
+      "categoria": "Medias Mujer",
+      "talle": "M",
+      "color": "Gris",
+      "codigo": 10014,
+      "locales": [
+        {"nombre": "Sucursal Centro", "id": 6},
+        {"nombre": "Sucursal Norte", "id": 2}
+      ],
+      "proveedor": {
+        "id": 2,
+        "nombre": "Textiles Andina"
+      }
+    }
+  ]
+}
