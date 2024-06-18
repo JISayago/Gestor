@@ -593,7 +593,8 @@
           "codigo": 10005,
           "id_proveedor": 4
         }
-      ]
+      ],
+      "ventas": []
     },
     {
       "id": 5,
