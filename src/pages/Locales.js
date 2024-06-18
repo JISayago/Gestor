@@ -21,7 +21,7 @@ function Locales({isAuthenticated}) {
         <ListadoLocales locales={locales} />
         <div className='w-full flex justify-center'>
           {usuarioCntxt.rol === 'admin' ? 
-      <button className='w-1/3 bg-color-1 text-white h-20 rounded-full hover:bg-blanco hover:text-negro-1'>
+      <button className='w-1/3 bg-color-1 text-white h-14 mb-12 rounded-full hover:bg-blanco hover:text-negro-1'>
            <Link to={'/local'}><label className='font-semibold mx-5'>Agregar Local</label><FontAwesomeIcon icon="fa-solid fa-plus" /> </Link>
             </button> :
             <></>
