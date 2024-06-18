@@ -23,7 +23,7 @@ function ItemLocal({ local,esNuevo }) {
   return (
     
     esNuevo ?
-      <div className='flex w-full lg:h-2/4 h-4/5 lg:m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
+      <div className='flex w-full md:h-4/5 lg:h-2/4 lg:m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         
         <div className='w-1/2 h-full flex justify-center items-center'>
         <img className='rounded-md w-full h-full' src={local.imagen} />
@@ -31,7 +31,7 @@ function ItemLocal({ local,esNuevo }) {
         
         <div className='flex flex-col w-1/2 h-auto items-center'>
           <div className='w-full flex justify-center h-1/3 p-2'>
-            <label className='text-xl font-bold text-color-1 '>{local.nombre}</label> 
+            <label className='text-xl font-bold text-color-1 overflow-hidden text-ellipsis whitespace-nowrap'>{local.nombre}</label> 
           </div>
           <div className='w-full flex text-center h-1/3 p-2'>
             <label className='text-lg overflow-hidden text-ellipsis whitespace-nowrap'>{local.dirección}</label> 
