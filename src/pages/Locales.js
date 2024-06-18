@@ -17,7 +17,7 @@ function Locales({isAuthenticated}) {
   return (
     <>
     <Navbar/>
-      <div className='w-full h-screen bg-negro-2'>
+      <div className='w-full md:h-fit lg:h-screen bg-negro-2'>
         <ListadoLocales locales={locales} />
         <div className='w-full flex justify-center'>
           {usuarioCntxt.rol === 'admin' ? 
