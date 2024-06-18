@@ -139,7 +139,7 @@ function VentasLocal() {
   return (
     <>
       <Navbar />
-      <div className="w-full lg:h-screen md:h-fit bg-negro-2 flex flex-col p-2">
+      <div className="w-full h-fit bg-negro-2 flex flex-col p-4">
         {/* Sección para el formulario */}
         <div className="w-full h-7/12 rounded-lg border-2 border-color-1 ">
           <CabeceraComprobante nro={nro} local={local} venta={""} textoTipo={'N° Venta: '}/>
@@ -180,7 +180,7 @@ function VentasLocal() {
         {/* División para el historial de ventas */}
         <div className="flex flex-col w-full h-5/12 bg-negro-2">
           <CabeceraHistorialVentas />
-          <div className="bg-negro-2 w-full flex-1 overflow-y-auto">
+          <div className="flex flex-col bg-negro-2 w-full">
             <CabeceraListadoVentas />
             {ventas.map(venta => (
               <LineaVenta key={venta.id} venta={venta} local={local} />
