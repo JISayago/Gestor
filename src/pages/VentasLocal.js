@@ -171,7 +171,7 @@ function VentasLocal() {
           </div>
           <div className='flex w-full h-1/6 justify-between p-3 mb-2 bg-negro-2'>
             <BotonesFormaPago handleTipoPago={handleTipoPago} />
-            <div className=''>
+            <div className='bg-negro-2'>
               <button onClick={generarCompra} className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
             </div>
           </div>
