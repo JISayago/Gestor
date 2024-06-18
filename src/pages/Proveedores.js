@@ -79,7 +79,7 @@ function Proveedores() {
 
         <CabeceraProveedores/>
         </div>
-        <div className='flex-1 h-7 overflow-y-auto p-2'>
+        <div className='flex-1 h-7 overflow-y-auto p-2 mr-4'>
           {proveedores.map(p => {
           return <LineaProveedor proveedor={p} cargarProveedor={cargarProveedor}/>
         })}

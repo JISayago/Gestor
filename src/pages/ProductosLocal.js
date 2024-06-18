@@ -51,7 +51,7 @@ function ProductosLocal() {
   return (
       <>
           <Navbar />
-          <div className='w-full h-screen bg-negro-2'>
+          <div className='w-full h-fit bg-negro-2'>
               <div>
                   
           <div className='p-4 flex items-center content-center '>

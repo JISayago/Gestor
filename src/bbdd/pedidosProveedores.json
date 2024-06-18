@@ -5,8 +5,8 @@
       "numeroReferencia": "0001/1",
       "proveedor": {
         "id": 1,
-        "nombre": "Nike",
-        "razonSocial": "Nike S.A.",
+        "nombre": "Distribuidora Sportiva",
+        "razonSocial": "Distribuidora Sportiva S.A.",
         "cuit": "1234567890",
         "cuentaCorriente": "123-456789/0",
         "email": "nike@example.com",
@@ -59,8 +59,8 @@
       "numeroReferencia": "0002/1",
       "proveedor": {
         "id": 2,
-        "nombre": "Puma",
-        "razonSocial": "Puma S.A.",
+        "nombre": "Textiles Andina",
+        "razonSocial": "Textiles Andina S.A.",
         "cuit": "2345678901",
         "cuentaCorriente": "234-567890/1",
         "email": "puma@example.com",

@@ -26,11 +26,11 @@ function ListadoProveedores() {
   <div className='w-full h-5/12'>
   <CabeceraListadoProveedor titulo={titulo} />
 </div>
-<div className='p-2 pr-6'>
+<div className='p-2'>
 
 <CabeceraProveedores/>
 </div>
-        <div className=' flex-1 h-96 overflow-y-scroll p-2'>
+        <div className=' flex-1 h-96 px-2'>
           {proveedores.map(p => {
             return <LineaProveedor proveedor={p} localId={parseInt(id)} cargarProveedor={""} />;
                   })}              

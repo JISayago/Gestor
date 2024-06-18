@@ -19,7 +19,7 @@ function Productos() {
   return (
     <>
       <Navbar />
-      <div className='w-full h-screen bg-negro-2'>
+      <div className='w-full h-fit bg-negro-2'>
     <div className='w-full h-5/12'>
     <CabeceraListadoProductos />
   </div>

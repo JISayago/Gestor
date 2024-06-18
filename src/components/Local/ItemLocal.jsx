@@ -23,25 +23,25 @@ function ItemLocal({ local,esNuevo }) {
   return (
     
     esNuevo ?
-      <div className='flex w-full h-3/5 m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
+      <div className='flex w-full h-4/5 m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         
-        <div className='w-1/2 h-full'>
-        <img className='rounded-md w-48 h-48 mt-5' src={local.imagen} />
+        <div className='w-1/2 h-full flex justify-center items-center'>
+        <img className='rounded-md w-36 h-36' src={local.imagen} />
         </div>
         
-        <div className='flex flex-col w-1/2 h-full justify-around items-center'>
-          <div className='w-full flex justify-center h-1/2 p-3 '>
-            <label className='text-2xl font-bold text-color-1'>{local.nombre}</label> 
+        <div className='flex flex-col w-1/2 h-full items-center'>
+          <div className='w-full flex justify-center h-1/3 p-2'>
+            <label className='text-xl font-bold text-color-1'>{local.nombre}</label> 
           </div>
-          <div className='w-full flex text-center h-1/2 p-3 '>
-            <label className='text-xl'>{local.dirección}</label> 
+          <div className='w-full flex text-center h-1/3 p-2'>
+            <label className='text-lg'>{local.dirección}</label> 
           </div>
         </div>
       </div>
     :
       <div className='flex w-full h-3/5 m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         <div className='w-1/2 h-full'>
-          <img className='rounded-md w-48 h-48' src={local.imagen} />
+          <img className='rounded-md w-40 h-40' src={local.imagen} />
         </div>
         <div className='flex flex-col w-1/2 h-full justify-around'>
           <div className='w-full flex justify-center  p-3 '>

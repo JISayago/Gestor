@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../assets/LogoLocal.png'
+import Logo from '../assets/localesImg/circular3.png'
 import IconoPerfil from '../assets/icono.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UsuarioContext';
@@ -30,13 +30,17 @@ function Navbar() {
 
   return (
     <div className='flex flex-col p-2 md:flex-row justify-between items-center w-full md:p-5 bg-negro-1 border-b border-b-blanco'>
-      <div className='w-full justify-center items-center md:w-32'>
-        <div className='w-auto flex justify-center md:w-32'>
-          <Link to='/'>
-          <img className='w-2/5 rounded-full md:w-32' src={IconoPerfil} alt="Logo" />
-          </Link>
-        </div>
-      </div>
+   <div className='w-full flex rounded-full justify-center items-center md:w-44 border-2 border-color-1'>
+  <div className='w-auto flex justify-center items-center md:w-40 md:h-40'>
+    <Link className='flex items-center rounded-full w-full h-full' to='/'>
+      <img 
+        className='rounded-full w-full h-full object-cover' 
+        src={Logo} 
+        alt="Logo" 
+      />
+    </Link>
+  </div>
+</div>
       <div className='flex justify-center items-end w-full'>
         <ol className='text-xl text-center text-white flex flex-col w-full h-full md:flex-row md:justify-evenly md:items-end md:h-full md:w-2/3 p-4'>
           <li className='p-3 border-b border-b-color-1 rounded-xl w-full md:border-b-negro-primario transition ease-in-out delay-100 hover:bg-color-1 hover:-translate-y-1 hover:scale-110 duration-300 '>

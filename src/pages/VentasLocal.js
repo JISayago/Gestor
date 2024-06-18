@@ -135,13 +135,13 @@ function VentasLocal() {
   return (
     <>
       <Navbar />
-      <div className="w-full h-screen bg-negro-2 flex flex-col p-3">
+      <div className="w-full h-fit bg-negro-2 flex flex-col p-2">
         {/* Sección para el formulario */}
-        <div className="w-full h-1/2 rounded-lg border-2 border-color-1">
+        <div className="w-full h-7/12 rounded-lg border-2 border-color-1 ">
           <CabeceraComprobante nro={nro} local={local} venta={""} textoTipo={'N° Venta: '}/>
           <div className='hidden md:flex md:flex-col md:bg-negro-2 md:h-4/6 md:rounded-b-lg md:border md:border-negro-2 '>
             {/*Contenido - Grilla*/}
-            <div className='w-full pr-4'>
+            <div className='w-full'>
               <CabeceraProducto />
             </div>
             <div className='w-full overflow-y-auto'>
@@ -155,7 +155,7 @@ function VentasLocal() {
                 />
               ))}
             </div>
-            <div className='w-full flex flex-row justify-center mt-2'>
+            <div className='w-full flex flex-row justify-center'>
               <button onClick={agregarLineaProducto} className="p-2 bg-transparent text-color-4 text-2xl">
                 <FontAwesomeIcon icon="fa-solid fa-plus" />
               </button>
@@ -165,7 +165,7 @@ function VentasLocal() {
               <label className='font-bold text-color-4 text-xl mr-5'>{`$ ${calcularTotalVenta()}`}</label>
             </div>
           </div>
-          <div className='flex w-full h-1/6 justify-between p-3'>
+          <div className='flex w-full h-1/6 justify-between p-3 mb-2'>
             <BotonesFormaPago handleTipoPago={handleTipoPago} />
             <div className=''>
               <button onClick={generarCompra} className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
@@ -174,7 +174,7 @@ function VentasLocal() {
         </div>
 
         {/* División para el historial de ventas */}
-        <div className="flex flex-col w-full h-1/2 ">
+        <div className="flex flex-col w-full h-5/12 ">
           <CabeceraHistorialVentas />
           <div className="bg-transparent w-full flex-1 overflow-y-auto p-2">
             <CabeceraListadoVentas />

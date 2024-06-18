@@ -49,9 +49,9 @@ function Usuarios() {
   return (
     <>
     <Navbar/>
-    <div className='w-full h-screen bg-negro-2 flex flex-col'>
-        <div className='flex flex-col w-full h-5/12'>
-          <div className='p-4 flex items-center content-center '>
+    <div className='w-full h-fit bg-negro-2 flex flex-col'>
+        <div className='flex flex-col w-full h-4/12'>
+          <div className='p-2 flex items-center content-center '>
             <h2 className='mx-5 text-2xl text-white font-bolder underline decoration-2 underline-offset-8'>{titulo}</h2>{/*cambia segun el usuario si se crea o se carga */ }
           </div>
           <UsuarioForm locales={locales} usuarios={usuarios}
@@ -72,14 +72,14 @@ function Usuarios() {
             editar={editar}
           />
         </div>
-        <div className='w-full h-5/12'>
+        <div className='w-full h-4/12'>
           <CabeceraListadoUsuarios />
         </div>
         <div className='p-2 pr-6'>
 
         <CabeceraUsuarios/>
         </div>
-        <div className=' flex-1 overflow-y-auto p-2'>
+        <div className='flex-1 h-7 overflow-y-auto p-2 mr-4'>
           {usuarios.map(usuario => {
             return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} esUsuarioLocal={esUsuarioLocal} />
           })}
