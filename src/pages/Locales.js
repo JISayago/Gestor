@@ -19,7 +19,7 @@ function Locales({isAuthenticated}) {
     <Navbar/>
       <div className='w-full md:h-fit lg:h-screen bg-negro-2'>
         <ListadoLocales locales={locales} />
-        <div className='w-full flex justify-center my-10'>
+        <div className='w-full flex justify-center bg-negro-2'>
           {usuarioCntxt.rol === 'admin' ? 
       <button className='w-1/3 bg-color-1 text-white h-14 mb-12 rounded-full hover:bg-blanco hover:text-negro-1'>
            <Link to={'/local'}><label className='font-semibold mx-5'>Agregar Local</label><FontAwesomeIcon icon="fa-solid fa-plus" /> </Link>
