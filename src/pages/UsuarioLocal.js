@@ -22,11 +22,11 @@ function UsuarioLocal() {
     <div className='w-full h-5/12'>
     <CabeceraListadoUsuarios />
   </div>
-  <div className='p-2 pr-6'>
+  <div className='p-2'>
 
   <CabeceraUsuarios/>
   </div>
-  <div className=' flex-1 overflow-y-scroll p-2'>
+  <div className=' flex-1 p-2'>
     {usuarios.map(usuario => {
       return <LineaUsuario usuario={usuario} cargarUsuario={cargarUsuario} esUsuarioLocal={esUsuarioLocal} />
     })}

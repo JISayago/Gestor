@@ -33,10 +33,10 @@ function Ventas() {
   <div className='w-full h-5/12'>
   <CabeceraHistorialVentas />
 </div>
-<div className='p-2 pr-6'>
+<div className='p-2 '>
 <CabeceraListadoVentas/>
 </div>
-<div className=' flex-1 overflow-y-scroll p-2'>
+<div className=' flex-1  p-2'>
           {ventas.map(venta => {
               return <LineaVenta venta={venta} local={venta.local} />
           })

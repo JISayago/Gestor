@@ -20,11 +20,11 @@ function Pedidos() {
   <div className='w-full h-5/12'>
   <CabeceraListadoProveedor titulo={titulo} />
 </div>
-<div className='p-2 pr-6'>
+<div className='p-2'>
 
 <CabeceraPedidos/>
 </div>
-        <div className=' flex-1 h-96 overflow-y-scroll p-2'>
+        <div className=' flex-1 h-96 p-2'>
           {pedidos.map(pedido => {
             return <LineaPedido pedido={pedido} />;
                   })}              

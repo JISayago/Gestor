@@ -82,10 +82,10 @@ function ProductosLocal() {
               <div className='w-full h-5/12 border-t border-t-white p-4'>
               <CabeceraListadoProductos />
               </div>
-              <div className='p-2 pr-6'>
+              <div className='p-2'>
                <CabeceraProductos/>
               </div>
-        <div className=' flex-1 overflow-y-scroll p-2'>
+        <div className=' flex-1 p-2'>
           {productos.map(p => {
             return <LineaProducto producto={p} cargarProducto={ cargarProducto} />
                  }
