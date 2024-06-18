@@ -47,14 +47,25 @@ function VentasLocal() {
   }, [local]);
 
   useEffect(() => {
-    const ultimoNro = ventas.reduce((max, item) => {
+    /*const ultimoNro = ventas.reduce((max, item) => {
       const partes = item.numeroComprobante.split('/');
       const numeroParte = parseInt(partes[0], 10);
       return Math.max(max, numeroParte);
     }, 0);
     const numeroIncrementado = ultimoNro + 1;
     const parteNumericaNueva = numeroIncrementado.toString().padStart(ventas[0]?.numeroComprobante.split('/')[0].length || 1, '0');
-    setNro(parteNumericaNueva);
+    setNro(parteNumericaNueva);*/
+    if (ventas.length < 1) { return setNro("0001"); }
+     ventas.map(item => {
+      const partes = item.numeroReferencia.split('/');
+      let numeroParte = parseInt(partes[0], 10);
+      const numeroIncrementado = numeroParte + 1;
+      const parteNumericaNueva = numeroIncrementado.toString().padStart(partes[0].length, '0');
+      console.log('', parteNumericaNueva)
+      return setNro(parteNumericaNueva);
+      //return setNro(`${parteNumericaNueva}/${partes[1]}`);
+        
+    })
   }, [ventas]);
 
 
