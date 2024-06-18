@@ -57,7 +57,7 @@ function VentasLocal() {
     setNro(parteNumericaNueva);*/
     if (ventas.length < 1) { return setNro("0001"); }
      ventas.map(item => {
-      const partes = item.numeroReferencia.split('/');
+      const partes = item.numeroComprobante.split('/');
       let numeroParte = parseInt(partes[0], 10);
       const numeroIncrementado = numeroParte + 1;
       const parteNumericaNueva = numeroIncrementado.toString().padStart(partes[0].length, '0');
