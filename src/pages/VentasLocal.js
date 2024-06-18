@@ -180,7 +180,7 @@ function VentasLocal() {
         {/* División para el historial de ventas */}
         <div className="flex flex-col w-full h-5/12 bg-negro-2">
           <CabeceraHistorialVentas />
-          <div className="bg-negro-2 w-full flex-1 overflow-y-auto p-2">
+          <div className="bg-negro-2 w-full flex-1 overflow-y-auto">
             <CabeceraListadoVentas />
             {ventas.map(venta => (
               <LineaVenta key={venta.id} venta={venta} local={local} />
