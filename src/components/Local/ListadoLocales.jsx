@@ -1,7 +1,8 @@
 import React from 'react'
 import ItemLocal from './ItemLocal'
 
-function ListadoLocales({locales}) {
+function ListadoLocales({ locales }) {
+  console.log(locales)
   return (
     <div className='flex flex-wrap justify-center w-full bg-negro-2 md:p-5'>
       {
