@@ -169,7 +169,7 @@ function VentasLocal() {
               <label className='font-bold text-color-4 text-xl mr-5'>{`$ ${calcularTotalVenta()}`}</label>
             </div>
           </div>
-          <div className='flex w-full h-1/6 justify-between p-3 mb-2'>
+          <div className='flex w-full h-1/6 justify-between p-3 mb-2 bg-negro-2'>
             <BotonesFormaPago handleTipoPago={handleTipoPago} />
             <div className=''>
               <button onClick={generarCompra} className='p-2 mx-2 bg-color-1 text-white hover:bg-white hover:text-color-1'>Generar Compra</button>
