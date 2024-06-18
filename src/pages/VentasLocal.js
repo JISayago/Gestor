@@ -139,7 +139,7 @@ function VentasLocal() {
   return (
     <>
       <Navbar />
-      <div className="w-full h-fit bg-negro-2 flex flex-col p-2">
+      <div className="w-full lg:h-screen md:h-fit bg-negro-2 flex flex-col p-2">
         {/* Sección para el formulario */}
         <div className="w-full h-7/12 rounded-lg border-2 border-color-1 ">
           <CabeceraComprobante nro={nro} local={local} venta={""} textoTipo={'N° Venta: '}/>
