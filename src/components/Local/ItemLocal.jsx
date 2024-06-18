@@ -23,7 +23,7 @@ function ItemLocal({ local,esNuevo }) {
   return (
     
     esNuevo ?
-      <div className='flex w-full md:h-4/5 lg:h-2/4 lg:m-10 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
+      <div className='flex w-full lg:m-10 h-1/3 p-2 items-center border-2 border-color-1 rounded-lg bg-blanco md:w-1/4'>
         
         <div className='w-1/2 h-full flex justify-center items-center'>
         <img className='rounded-md w-full h-full' src={local.imagen} />

@@ -75,7 +75,7 @@ function LocalAgregar() {
             editar={editar}
           />
         </div>
-        <div className=' flex-1 flex overflow-y-auto p-2 flex-wrap h-screen justify-center'>
+        <div className='flex p-2 flex-wrap h-fir justify-center bg-negro-2'>
           {locales.map(l => {
               return <ItemLocal local={l} esNuevo={esNuevo } />
           })}
