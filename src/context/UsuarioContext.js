@@ -18,11 +18,9 @@ export const UsuarioProvider = ({ children }) => {
   // Cargar el usuario del localStorage al montar el componente
   useEffect(() => {
     const savedUser = localStorage.getItem('usuarioCntxt');
-    console.log('savedUser antes del if:', savedUser);
     
     if (savedUser) {
       const parsedUser = JSON.parse(savedUser);
-      console.log('parsedUser después del if:', parsedUser);
       setUsuarioCntxt(parsedUser);
       const savedIndex = parsedUser.imgPerfilIndex;
       if (savedIndex >= 0 && savedIndex < imgPerfil.length) {

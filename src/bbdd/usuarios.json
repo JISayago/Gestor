@@ -16,37 +16,37 @@
           "id": 1,
           "nombre": "Local Central",
           "direccion": "Avenida Siempreviva 123, Buenos Aires",
-          "imagen": "https://i.imgur.com/DvXzcGJ.jpg"
+          "imagen": "https://i.imgur.com/3F1W5TN.png"
         },
         {
           "id": 2,
           "nombre": "Sucursal Norte",
           "dirección": "Calle Falsa 456, Buenos Aires",
-          "imagen": "https://i.imgur.com/tmjutyd.jpg"
+          "imagen": "https://i.imgur.com/HQFF20Z.png"
         },
         {
           "id": 3,
           "nombre": "Sucursal Sur",
           "dirección": "Boulevard Sur 789, Buenos Aires",
-          "imagen": "https://i.imgur.com/FueEsyp.jpg"
+          "imagen": "https://i.imgur.com/G7bMyfw.png"
         },
         {
           "id": 4,
           "nombre": "Sucursal Este",
           "dirección": "Plaza Este 101, Buenos Aires",
-          "imagen": "https://i.imgur.com/zd3JBJo.jpg"
+          "imagen": "https://i.imgur.com/SlT9zLb.png"
         },
         {
           "id": 5,
           "nombre": "Sucursal Oeste",
           "dirección": "Calle Oeste 202, Buenos Aires",
-          "imagen": "https://i.imgur.com/v0kSziF.jpg"
+          "imagen": "https://i.imgur.com/dHJTZjR.png"
         },
         {
           "id": 6,
           "nombre": "Sucursal Centro",
           "dirección": "Centro Comercial 303, Buenos Aires",
-          "imagen": "https://i.imgur.com/hs77ZwD.png"
+          "imagen": "https://i.imgur.com/epEyXTm.png"
         }
       ],
       "ventasRealizadas": 3,

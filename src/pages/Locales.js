@@ -13,7 +13,7 @@ function Locales({isAuthenticated}) {
   useEffect(() => {
     usuarioCntxt && setLocales(usuarioCntxt.locales)
    },[usuarioCntxt])
-
+console.log(usuarioCntxt)
   return (
     <>
     <Navbar/>
